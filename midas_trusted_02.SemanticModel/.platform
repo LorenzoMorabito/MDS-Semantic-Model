@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "midas_trusted_02"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "24ccb33c-a51a-445b-bd02-9c8261a2f4f0"
+  }
+}

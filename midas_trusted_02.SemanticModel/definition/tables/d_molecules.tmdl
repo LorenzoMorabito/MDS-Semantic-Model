@@ -1,0 +1,55 @@
+table d_molecules
+	lineageTag: 5f0ea395-31a7-4796-a875-e61f24c362e6
+
+	column MOLECULE_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4c53a78b-4348-4eda-8887-10a7b4497803
+		summarizeBy: none
+		sourceColumn: MOLECULE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOLECULE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 770744e7-4432-49cb-9b09-6c2d98609e56
+		summarizeBy: none
+		sourceColumn: MOLECULE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CORPORATE_MOLECULE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 7951f2a0-f5a2-4584-9466-4aaf4325dcc3
+		summarizeBy: none
+		sourceColumn: CORPORATE_MOLECULE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e2d1a667-e2df-40c9-a48f-15f1d10780a3
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_molecules = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_molecules_Table = trusted_starschema_02_Schema{[Name="d_molecules",Kind="Table"]}[Data]
+				in
+				    d_molecules_Table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,44 @@
+table d_international_brands
+	lineageTag: 0f2c14ad-e444-49eb-91d9-9adbc2fdde6c
+
+	column INTERNATIONAL_BRAND_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 075dfa7e-9bcd-45b9-b07c-441f04b56156
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_BRAND_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_BRAND
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 4cccbfab-3d39-40d2-9e80-c9ca1cce1e98
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_BRAND
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: c9c26158-469f-4fca-84af-bb3bf8d811d6
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_international_brands = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_international_brands_Table = trusted_starschema_02_Schema{[Name="d_international_brands",Kind="Table"]}[Data]
+				in
+				    d_international_brands_Table
+

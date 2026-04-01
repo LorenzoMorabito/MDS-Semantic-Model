@@ -1,0 +1,44 @@
+table d_biologic_molecules
+	lineageTag: d9df4858-c386-4a3b-9b65-b201c749c662
+
+	column BIOLOGIC_MOLECULE_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: cc40c959-ce18-46c4-9570-cb1a5c2d991e
+		summarizeBy: none
+		sourceColumn: BIOLOGIC_MOLECULE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIOLOGIC_MOLECULE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: a1a59d0c-d8d7-4316-8801-db2f076bbf85
+		summarizeBy: none
+		sourceColumn: BIOLOGIC_MOLECULE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 2e7e9e88-af85-48b7-bf33-3cf711f62895
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_biologic_molecules = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_biologic_molecules_Table = trusted_starschema_02_Schema{[Name="d_biologic_molecules",Kind="Table"]}[Data]
+				in
+				    d_biologic_molecules_Table
+

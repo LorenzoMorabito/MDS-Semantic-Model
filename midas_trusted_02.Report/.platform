@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "midas_trusted_02"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fdb1cf8e-abc4-4c30-9ea4-8fc97df5954f"
+  }
+}

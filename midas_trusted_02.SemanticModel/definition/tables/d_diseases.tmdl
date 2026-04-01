@@ -1,0 +1,53 @@
+table d_diseases
+	lineageTag: 2d3a98ae-0e5b-4cf1-8461-cb8c774dd1a9
+
+	column DISEASE_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 1f5df1dc-c8b7-4c2f-9833-7767b6cc035e
+		summarizeBy: none
+		sourceColumn: DISEASE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISEASE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 96f4c8f4-6b45-45e9-bce8-718b35ebd07c
+		summarizeBy: none
+		sourceColumn: DISEASE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISEASE_AREAS
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: a7ea4da3-62f5-481e-83bb-b481c1b6a5c5
+		summarizeBy: none
+		sourceColumn: DISEASE_AREAS
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 15cf98f9-2927-4ddf-b0d3-c3de441728e5
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_diseases = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_diseases_Table = trusted_starschema_02_Schema{[Name="d_diseases",Kind="Table"]}[Data]
+				in
+				    d_diseases_Table
+

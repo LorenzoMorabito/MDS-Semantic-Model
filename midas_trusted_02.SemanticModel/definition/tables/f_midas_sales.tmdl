@@ -1,0 +1,521 @@
+table f_midas_sales
+	lineageTag: c2597620-aa63-4ccd-99d0-834cd6d6aed6
+
+	column MIDAS_SALES_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(max)
+		lineageTag: dcce2d44-4c56-4adc-b712-59ae23e8e57d
+		summarizeBy: none
+		sourceColumn: MIDAS_SALES_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC4_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b9391c1f-6a90-4061-aac0-45785dfff22e
+		summarizeBy: none
+		sourceColumn: ATC4_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHANNEL_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: fa1591e5-6f59-4525-8672-8ef2968bfd35
+		summarizeBy: none
+		sourceColumn: CHANNEL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_PRESCRIPTION_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c61f87b2-3638-4e78-b492-efd790c2438e
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_PRESCRIPTION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISEASE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 89776759-8c45-491a-9fa9-1f1fc3a46b9f
+		summarizeBy: none
+		sourceColumn: DISEASE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NFC123_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 44c96256-da52-4db1-926c-c6cea4635ea4
+		summarizeBy: none
+		sourceColumn: NFC123_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MANUFACTURER_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 80e02e1a-d058-496e-bb81-050b9b4f547c
+		summarizeBy: none
+		sourceColumn: MANUFACTURER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOLECULE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 70f556be-a03a-4e95-8cb8-057d882da852
+		summarizeBy: none
+		sourceColumn: MOLECULE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LICENSING_STATUS_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 741c30d5-2d0f-48f3-bd8e-580f7bb4b62f
+		summarizeBy: none
+		sourceColumn: LICENSING_STATUS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIAG4_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: daf5a7ef-7c97-4cfe-a7ca-a28a7796574e
+		summarizeBy: none
+		sourceColumn: DIAG4_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPECIALTY_PRODUCT_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 145ccd56-5860-44eb-8019-105c9b7b9ab5
+		summarizeBy: none
+		sourceColumn: SPECIALTY_PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOLECULE_PATENT_EXPIRY_DATE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0dc517f9-d9a2-40dd-a610-a502b258441c
+		summarizeBy: none
+		sourceColumn: MOLECULE_PATENT_EXPIRY_DATE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column GENERIC_PRODUCT_CLASSIFICATION_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d496ad00-1259-40a1-837b-ccf4753e19cd
+		summarizeBy: none
+		sourceColumn: GENERIC_PRODUCT_CLASSIFICATION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIOCOMPARABLE_PRODUCT_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: eb20a475-1f75-4ff0-a7b5-063f52d9e95b
+		summarizeBy: none
+		sourceColumn: BIOCOMPARABLE_PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NON_BIOCOMPARABLE_PRODUCT_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 44dc2e6e-1f4f-4f33-a00c-2684517245ee
+		summarizeBy: none
+		sourceColumn: NON_BIOCOMPARABLE_PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIOSIMILAR_REFERENCE_GROUP_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7f175989-dffb-4a68-8216-138cd6eccd24
+		summarizeBy: none
+		sourceColumn: BIOSIMILAR_REFERENCE_GROUP_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISEASE_RATIO_SOURCE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9951fe0d-457e-4544-9e75-67c63e874c78
+		summarizeBy: none
+		sourceColumn: DISEASE_RATIO_SOURCE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGIMEN_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: deca7a1d-7d2c-40b2-b3b8-f0b32e363469
+		summarizeBy: none
+		sourceColumn: REGIMEN_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROTECTION_CURRENT_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6913e741-5f26-472a-94be-716f62eb103e
+		summarizeBy: none
+		sourceColumn: PROTECTION_CURRENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_BRAND_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: baa26ed5-b358-422d-821a-2114c995f88a
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_BRAND_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 957cf65e-1c2a-4a36-aebb-83da524679c2
+		summarizeBy: none
+		sourceColumn: PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CORPORATION_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2b792836-1d69-4c22-b261-1abe7e74c7b8
+		summarizeBy: none
+		sourceColumn: CORPORATION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 32fa02f0-8815-49df-948b-5f780275d0c3
+		summarizeBy: none
+		sourceColumn: COUNTRY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_PACK_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7bb7b769-d3c7-4e37-998e-be4b7d47085c
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_PACK_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_PRODUCT_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e563e1f5-917e-46f4-8fc1-8ade154d7ba7
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIOLOGIC_MOLECULE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e40ccd4f-2f08-4ff1-830a-6aa0917deb55
+		summarizeBy: none
+		sourceColumn: BIOLOGIC_MOLECULE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIOLOGIC_PRODUCT_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d783700d-d28a-4508-b403-862eebd9b29c
+		summarizeBy: none
+		sourceColumn: BIOLOGIC_PRODUCT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INNOVATION_INSIGHTS_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: f9143bdc-c60a-4d6b-bf36-bb1acad5b0cc
+		summarizeBy: none
+		sourceColumn: INNOVATION_INSIGHTS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAME_TYPE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 83154e0d-c1e3-4f86-b37a-bcdeddf575bf
+		summarizeBy: none
+		sourceColumn: NAME_TYPE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2cc5ee74-5463-4411-a799-f27a43c26a83
+		summarizeBy: none
+		sourceColumn: ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROTECTION_HISTORICAL_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5255355c-e919-424d-8c60-c61eef56082f
+		summarizeBy: none
+		sourceColumn: PROTECTION_HISTORICAL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRE_POST_PROTECTION_EXPIRY_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9d310150-f7eb-402b-bd3c-7118e5d9226f
+		summarizeBy: none
+		sourceColumn: PRE_POST_PROTECTION_EXPIRY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTIMATED_PROTECTION_EXPIRY_DATE_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6ecc182c-f352-49b5-b275-37923473eddc
+		summarizeBy: none
+		sourceColumn: ESTIMATED_PROTECTION_EXPIRY_DATE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAUNCH_STATUS_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 14805f9f-eca4-4555-8caa-a97f7e1eab37
+		summarizeBy: none
+		sourceColumn: LAUNCH_STATUS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARKET_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4f3d386c-256f-400d-a572-ef0a8cee4e1b
+		summarizeBy: none
+		sourceColumn: MARKET_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUARTER_ID
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: b58594d0-a867-4369-8f7a-8fda79192d92
+		summarizeBy: none
+		sourceColumn: QUARTER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SALES_EURO
+		dataType: double
+		sourceProviderType: decimal(38, 16)
+		lineageTag: 831a9d2c-2fc8-461a-85a0-73ac4f18a5c3
+		summarizeBy: sum
+		sourceColumn: SALES_EURO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SALES_LOCAL_CURRENCY
+		dataType: double
+		sourceProviderType: decimal(38, 16)
+		lineageTag: f004d49d-961a-407a-991e-934f084c0a1a
+		summarizeBy: sum
+		sourceColumn: SALES_LOCAL_CURRENCY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SALES_EURO_COSTANT_LOCAL_CURRENCY
+		dataType: double
+		sourceProviderType: decimal(38, 16)
+		lineageTag: f66ee402-938c-4e13-9dad-7fe38562ddfb
+		summarizeBy: sum
+		sourceColumn: SALES_EURO_COSTANT_LOCAL_CURRENCY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column STANDARD_UNITS
+		dataType: double
+		sourceProviderType: decimal(38, 16)
+		lineageTag: 279e4cf7-28e2-4ee1-a76a-41cfdd29d285
+		summarizeBy: sum
+		sourceColumn: STANDARD_UNITS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COUNTING_UNITS
+		dataType: double
+		sourceProviderType: decimal(38, 16)
+		lineageTag: bedc3b42-a949-4f64-b853-5ac697135235
+		summarizeBy: sum
+		sourceColumn: COUNTING_UNITS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UNITS
+		dataType: double
+		sourceProviderType: decimal(38, 16)
+		lineageTag: e1ffa9ed-14de-4274-b6e7-d4375bee5d7b
+		summarizeBy: sum
+		sourceColumn: UNITS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SALES_US_DOLLARS
+		dataType: double
+		sourceProviderType: decimal(38, 16)
+		lineageTag: f2e999f8-b068-4357-8197-872a8a6e1578
+		summarizeBy: sum
+		sourceColumn: SALES_US_DOLLARS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOTAL_NUMBER_OF_DAILY_DOSES
+		dataType: double
+		sourceProviderType: decimal(38, 16)
+		lineageTag: aa4498c1-4bed-43dd-a362-7fe97009f4a0
+		summarizeBy: sum
+		sourceColumn: TOTAL_NUMBER_OF_DAILY_DOSES
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PRODUCT_LAUNCH_DATE
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 743b82a8-0f37-44d6-a6a7-f3fa8caae999
+		summarizeBy: none
+		sourceColumn: PRODUCT_LAUNCH_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CATEGORY_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c1b9be83-041c-4184-bc62-d1e4d6f87ad6
+		summarizeBy: none
+		sourceColumn: CATEGORY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_L2_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 941250d4-9a07-4fd8-800c-b3237aa0b497
+		summarizeBy: none
+		sourceColumn: CATEGORY_L2_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORY_L3_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e620005d-d9e4-4d1b-901b-40d90d92f52b
+		summarizeBy: none
+		sourceColumn: CATEGORY_L3_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: cb934143-6e52-4fac-9d3b-d01bf569c8e4
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition f_midas_sales = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    f_midas_sales_Table = trusted_starschema_02_Schema{[Name="f_midas_sales",Kind="Table"]}[Data]
+				in
+				    f_midas_sales_Table
+
+	annotation PBI_ResultType = Table
+

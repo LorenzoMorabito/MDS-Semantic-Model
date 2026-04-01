@@ -1,0 +1,46 @@
+table d_licensing_status
+	lineageTag: 76b41cd8-50f7-4293-bbb8-352d5d18e5c3
+
+	column LICENSING_STATUS_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0aa8a5c2-138a-4ab4-81e6-edbee0cdb75e
+		summarizeBy: none
+		sourceColumn: LICENSING_STATUS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LICENSING_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 636f8855-556a-4472-ba50-16f21f1f82b6
+		summarizeBy: none
+		sourceColumn: LICENSING_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: adc7c8d3-6840-4392-b6d2-51c226a3d1de
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_licensing_status = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_licensing_status_Table = trusted_starschema_02_Schema{[Name="d_licensing_status",Kind="Table"]}[Data]
+				in
+				    d_licensing_status_Table
+
+	annotation PBI_ResultType = Table
+

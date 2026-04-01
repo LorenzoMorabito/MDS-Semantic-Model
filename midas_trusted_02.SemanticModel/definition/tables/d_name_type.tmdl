@@ -1,0 +1,46 @@
+table d_name_type
+	lineageTag: f2f8e067-110e-41f7-bb61-1238bd23180e
+
+	column NAME_TYPE_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 83ca9022-aa4f-4e0e-8ba8-116b32683fd6
+		summarizeBy: none
+		sourceColumn: NAME_TYPE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAME_TYPE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 7ac8d5e0-ccaf-4c2c-808c-d0d777727c5f
+		summarizeBy: none
+		sourceColumn: NAME_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9751f85c-2a5e-427d-8cf7-6d0b559d9f0d
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_name_type = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_name_type_Table = trusted_starschema_02_Schema{[Name="d_name_type",Kind="Table"]}[Data]
+				in
+				    d_name_type_Table
+
+	annotation PBI_ResultType = Table
+

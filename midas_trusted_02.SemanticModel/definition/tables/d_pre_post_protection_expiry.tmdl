@@ -1,0 +1,46 @@
+table d_pre_post_protection_expiry
+	lineageTag: 6f064e39-8ea6-40a2-8216-ef5504659c05
+
+	column PRE_POST_PROTECTION_EXPIRY_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 82e2c4cd-1710-45ee-b62e-996da6546f05
+		summarizeBy: none
+		sourceColumn: PRE_POST_PROTECTION_EXPIRY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRE_POST_PROTECTION_EXPIRY
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: f7f5461e-992a-435b-836c-aee831d5dfaa
+		summarizeBy: none
+		sourceColumn: PRE_POST_PROTECTION_EXPIRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 136daf1d-c71a-4516-96d9-4d1ba71acd16
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_pre_post_protection_expiry = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_pre_post_protection_expiry_Table = trusted_starschema_02_Schema{[Name="d_pre_post_protection_expiry",Kind="Table"]}[Data]
+				in
+				    d_pre_post_protection_expiry_Table
+
+	annotation PBI_ResultType = Table
+

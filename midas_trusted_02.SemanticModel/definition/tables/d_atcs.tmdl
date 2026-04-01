@@ -1,0 +1,116 @@
+table d_atcs
+	lineageTag: a17c3b0d-718e-4f39-ae06-9e2489487458
+
+	column ATC1
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 4a9cdc76-6eeb-4b3f-b22d-5c5923855441
+		summarizeBy: none
+		sourceColumn: ATC1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC1_CODE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 56d2c51f-0580-46b1-a441-d11cff1913e9
+		summarizeBy: none
+		sourceColumn: ATC1_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC2
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: c9ed7ce3-b198-4e89-a137-0e3d3a854be9
+		summarizeBy: none
+		sourceColumn: ATC2
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC2_CODE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 3904a4b4-e156-455f-a359-6e89554265af
+		summarizeBy: none
+		sourceColumn: ATC2_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC3_PIE_GROUP
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 1633fa7b-b9d1-428b-a94f-3a10c3be2488
+		summarizeBy: none
+		sourceColumn: ATC3_PIE_GROUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC3
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 77ddfbc4-10c6-458e-8523-761358745654
+		summarizeBy: none
+		sourceColumn: ATC3
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC3_CODE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 40237513-bea8-4f05-8feb-f5a0c8182a47
+		summarizeBy: none
+		sourceColumn: ATC3_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC4_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b512aa60-0a13-4af8-9789-4f8f28bf766a
+		summarizeBy: none
+		sourceColumn: ATC4_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC4
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 63db2b72-10e2-4e18-9df3-281403766dd9
+		summarizeBy: none
+		sourceColumn: ATC4
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC4_CODE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: a403ca15-129d-4336-b219-ec6c2eb853d5
+		summarizeBy: none
+		sourceColumn: ATC4_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 02b22201-f034-4d2e-981f-014dc9a4ebf5
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_atcs = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_atcs_Table = trusted_starschema_02_Schema{[Name="d_atcs",Kind="Table"]}[Data]
+				in
+				    d_atcs_Table
+

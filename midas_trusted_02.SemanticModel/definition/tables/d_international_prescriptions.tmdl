@@ -1,0 +1,53 @@
+table d_international_prescriptions
+	lineageTag: c5125d79-3979-4595-a18c-5b29db00910a
+
+	column INTERNATIONAL_PRESCRIPTION_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: da6b99e7-3a95-478e-a543-f4c7c6f1b255
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_PRESCRIPTION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_PRESCRIPTION
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: be5735dd-e22d-483d-be7e-8741de1f4b71
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_PRESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column OUR_PRESCRIPTION
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 8e951723-dcd9-4715-a988-09a572ae1b6e
+		summarizeBy: none
+		sourceColumn: OUR_PRESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 2ef8ff1a-75df-4eae-9e5b-37f72b979041
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_international_prescriptions = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_international_prescriptions_Table = trusted_starschema_02_Schema{[Name="d_international_prescriptions",Kind="Table"]}[Data]
+				in
+				    d_international_prescriptions_Table
+

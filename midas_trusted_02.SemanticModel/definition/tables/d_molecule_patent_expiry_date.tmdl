@@ -1,0 +1,46 @@
+table d_molecule_patent_expiry_date
+	lineageTag: b115dc69-4eb4-467e-9ff4-c4b7fad1099d
+
+	column MOLECULE_PATENT_EXPIRY_DATE_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 42b84cd9-edcf-43cf-b82d-11b5346a00c2
+		summarizeBy: none
+		sourceColumn: MOLECULE_PATENT_EXPIRY_DATE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOLECULE_PATENT_EXPIRY_DATE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: deee3a14-803c-494e-bf7a-19e8a356cb86
+		summarizeBy: none
+		sourceColumn: MOLECULE_PATENT_EXPIRY_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b6068086-fb74-42e7-8695-811572ead512
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_molecule_patent_expiry_date = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_molecule_patent_expiry_date_Table = trusted_starschema_02_Schema{[Name="d_molecule_patent_expiry_date",Kind="Table"]}[Data]
+				in
+				    d_molecule_patent_expiry_date_Table
+
+	annotation PBI_ResultType = Table
+

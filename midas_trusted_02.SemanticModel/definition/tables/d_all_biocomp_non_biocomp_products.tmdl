@@ -1,0 +1,44 @@
+table d_all_biocomp_non_biocomp_products
+	lineageTag: 1f4d6615-59d6-429e-ba51-e109f9161d40
+
+	column ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 559088f4-d875-4fee-864c-4a23566ce3bc
+		summarizeBy: none
+		sourceColumn: ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: ac045f32-2d67-4a50-81f2-0b04480fd59b
+		summarizeBy: none
+		sourceColumn: ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 126040b4-e9e6-4588-9e5e-7cf5c134406d
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_all_biocomp_non_biocomp_products = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_all_biocomp_non_biocomp_products_Table = trusted_starschema_02_Schema{[Name="d_all_biocomp_non_biocomp_products",Kind="Table"]}[Data]
+				in
+				    d_all_biocomp_non_biocomp_products_Table
+

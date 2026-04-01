@@ -1,0 +1,71 @@
+table d_international_packs
+	lineageTag: 5ff7070a-d7b9-47f0-929a-19f81e09b17a
+
+	column INTERNATIONAL_PACK_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b2eb7c13-e2d9-4fcd-af39-f54906c8f4c4
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_PACK_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_PACK
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 5bd0c4bf-4e08-4dc6-983f-7f21a4a6ff31
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_PACK
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_STRENGTH
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: fae93d83-83a6-4e4e-aad1-4d6443cf0d7f
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_STRENGTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_SIZE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 5caee685-b9f9-42cf-9a24-3c93c55de745
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_SIZE
+
+		annotation SummarizationSetBy = Automatic
+
+	column INTERNATIONAL_VOLUME
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 39f6b49e-376e-4c91-927e-c9c394aedfb4
+		summarizeBy: none
+		sourceColumn: INTERNATIONAL_VOLUME
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7db82413-b848-411b-92b5-2a2940a17fd0
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_international_packs = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_international_packs_Table = trusted_starschema_02_Schema{[Name="d_international_packs",Kind="Table"]}[Data]
+				in
+				    d_international_packs_Table
+

@@ -1,0 +1,65 @@
+table d_manufacturers
+	lineageTag: 566a4051-b784-437e-8496-8dea8cee60cd
+
+	column MANUFACTURER_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 253c526f-4d71-4fb0-93c4-910600fcb779
+		summarizeBy: none
+		sourceColumn: MANUFACTURER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MANUFACTURER
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: ebf2d4e5-9af3-4201-8b53-6753d6163240
+		summarizeBy: none
+		sourceColumn: MANUFACTURER
+
+		annotation SummarizationSetBy = Automatic
+
+	column OUR_MANUFACTURER
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: ab4a2547-ca06-4d9f-8d01-bfe6ccc71bac
+		summarizeBy: none
+		sourceColumn: OUR_MANUFACTURER
+
+		annotation SummarizationSetBy = Automatic
+
+	column MENARINI_FLAG
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 6b1beea6-0a78-48f8-a010-8756832d1dd7
+		summarizeBy: none
+		sourceColumn: MENARINI_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 6e54c5e8-1649-4f3a-bf33-6b2603c93410
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_manufacturers = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_manufacturers_Table = trusted_starschema_02_Schema{[Name="d_manufacturers",Kind="Table"]}[Data]
+				in
+				    d_manufacturers_Table
+
+	annotation PBI_ResultType = Table
+

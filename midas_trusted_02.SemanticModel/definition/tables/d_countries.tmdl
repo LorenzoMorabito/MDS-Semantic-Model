@@ -1,0 +1,62 @@
+table d_countries
+	lineageTag: ab66475e-c8fd-4063-a36e-9159d969cc46
+
+	column COUNTRY_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 8a345cfe-dc60-4860-ac61-3569fec1d25e
+		summarizeBy: none
+		sourceColumn: COUNTRY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 57680145-d502-44dd-9a26-c4511f8953f3
+		summarizeBy: none
+		sourceColumn: COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISO_COUNTRY_CODE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 4cf52290-3ff0-4d3d-88d1-9cbe54715da6
+		summarizeBy: none
+		sourceColumn: ISO_COUNTRY_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGION
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: e948cefc-3a37-416f-a500-c893dad1bc1f
+		summarizeBy: none
+		sourceColumn: REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 4914f4f2-48ab-4780-96a1-6d701c285dce
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_countries = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_countries_Table = trusted_starschema_02_Schema{[Name="d_countries",Kind="Table"]}[Data]
+				in
+				    d_countries_Table
+

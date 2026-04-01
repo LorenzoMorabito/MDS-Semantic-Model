@@ -1,0 +1,64 @@
+table d_reconstructed_markets
+	lineageTag: bb56ea9e-0227-4f55-a015-802ed29c381c
+
+	column MARKET_ID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 29dbe120-7a02-4f87-ad47-1f1b0ddf5821
+		summarizeBy: none
+		sourceColumn: MARKET_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARKET
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 20c5deba-d740-44ee-8b9c-73d978df2fab
+		summarizeBy: none
+		sourceColumn: MARKET
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARKET_CODE
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 8be581c7-7067-45b4-bb69-9541bbef93bf
+		summarizeBy: none
+		sourceColumn: MARKET_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARKET_DEFINITION
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: e3475383-bd0e-48c4-b2c3-e70cd6e9cc87
+		summarizeBy: none
+		sourceColumn: MARKET_DEFINITION
+
+		annotation SummarizationSetBy = Automatic
+
+	column _trusted_ts
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b9f5043c-cdf2-46c3-9889-579638cef4a0
+		summarizeBy: none
+		sourceColumn: _trusted_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_reconstructed_markets = m
+		mode: directQuery
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),
+				    dev_iqvia_catalog_Database = Source{[Name="dev_iqvia_catalog",Kind="Database"]}[Data],
+				    trusted_starschema_02_Schema = dev_iqvia_catalog_Database{[Name="trusted_starschema_02",Kind="Schema"]}[Data],
+				    d_reconstructed_markets_Table = trusted_starschema_02_Schema{[Name="d_reconstructed_markets",Kind="Table"]}[Data]
+				in
+				    d_reconstructed_markets_Table
+
+	annotation PBI_ResultType = Table
+
