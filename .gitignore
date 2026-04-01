@@ -1,2 +1,11 @@
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+
+# BEGIN REPO-HEALTH
+# Repo health generated outputs are runtime artifacts and should not be committed.
+/repository-health/outputs/current/*
+!/repository-health/outputs/current/.gitkeep
+/repository-health/outputs/history/*
+!/repository-health/outputs/history/.gitkeep
+# END REPO-HEALTH
+
