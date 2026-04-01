@@ -2,6 +2,7 @@ table d_international_prescriptions
 	lineageTag: c5125d79-3979-4595-a18c-5b29db00910a
 
 	column INTERNATIONAL_PRESCRIPTION_ID
+		isHidden
 		dataType: int64
 		isNullable: false
 		formatString: 0
@@ -31,6 +32,7 @@ table d_international_prescriptions
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
+		isHidden
 		dataType: dateTime
 		formatString: General Date
 		sourceProviderType: datetime2
@@ -41,7 +43,7 @@ table d_international_prescriptions
 		annotation SummarizationSetBy = Automatic
 
 	partition d_international_prescriptions = m
-		mode: directQuery
+		mode: dual
 		source =
 				let
 				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),

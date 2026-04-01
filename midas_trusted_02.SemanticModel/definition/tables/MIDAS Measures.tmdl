@@ -1,0 +1,56 @@
+table 'MIDAS Measures'
+	lineageTag: 5cf789ec-83f8-4950-b83a-5dca322c3871
+
+	measure Units = SUM ( f_midas_sales[UNITS] )
+		formatString: #,0;-#,0;0
+		displayFolder: Base
+		lineageTag: 7e2a5eca-a943-49e3-9961-36c03b4cbe56
+
+	measure 'Counting Units' = SUM ( f_midas_sales[COUNTING_UNITS] )
+		formatString: #,0;-#,0;0
+		displayFolder: Base
+		lineageTag: 8220be05-70fe-48cc-9b34-734a95cf4200
+
+	measure 'Standard Units' = SUM ( f_midas_sales[STANDARD_UNITS] )
+		formatString: #,0;-#,0;0
+		displayFolder: Base
+		lineageTag: 76731f5c-f338-4f95-a933-d4c6b09d3d92
+
+	measure 'Sales LE' = SUM ( f_midas_sales[SALES_EURO] )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Base
+		lineageTag: ed434b9c-ddb8-4c74-ab51-0504bdf21710
+
+	measure 'Sales USD' = SUM ( f_midas_sales[SALES_US_DOLLARS] )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Base
+		lineageTag: e57c9638-79d8-4dd2-ba7b-aa4324fbb6f8
+
+	measure 'Sales Local Currency' = SUM ( f_midas_sales[SALES_LOCAL_CURRENCY] )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Base
+		lineageTag: 19e87f59-ca8c-479d-8cc7-a6df924fd384
+
+	measure 'Sales Euro Constant Local Currency' = SUM ( f_midas_sales[SALES_EURO_COSTANT_LOCAL_CURRENCY] )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Base
+		lineageTag: d490eb4c-7052-4790-8d42-d5cc1a258220
+
+	measure 'Total Daily Doses' = SUM ( f_midas_sales[TOTAL_NUMBER_OF_DAILY_DOSES] )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Base
+		lineageTag: faef8e88-f9ec-495a-913b-a8b74782d22e
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 05e8d702-cc7d-44e5-aed2-c73370d286d8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'MIDAS Measures' = calculated
+		mode: import
+		source = Row("Column", BLANK())

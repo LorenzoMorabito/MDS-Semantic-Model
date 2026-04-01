@@ -2,6 +2,7 @@ table d_molecules
 	lineageTag: 5f0ea395-31a7-4796-a875-e61f24c362e6
 
 	column MOLECULE_ID
+		isHidden
 		dataType: int64
 		isNullable: false
 		formatString: 0
@@ -31,6 +32,7 @@ table d_molecules
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
+		isHidden
 		dataType: dateTime
 		formatString: General Date
 		sourceProviderType: datetime2
@@ -41,7 +43,7 @@ table d_molecules
 		annotation SummarizationSetBy = Automatic
 
 	partition d_molecules = m
-		mode: directQuery
+		mode: dual
 		source =
 				let
 				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),

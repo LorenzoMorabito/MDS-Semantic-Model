@@ -2,6 +2,7 @@ table d_time
 	lineageTag: 66ab9e87-585a-45da-aa5f-87ac76eaf140
 
 	column QUARTER_ID
+		isHidden
 		dataType: dateTime
 		formatString: Long Date
 		sourceProviderType: date
@@ -20,10 +21,12 @@ table d_time
 		lineageTag: 29f35384-e2f0-49c5-9eb7-caa8412460d9
 		summarizeBy: none
 		sourceColumn: QUARTER
+		sortByColumn: QUARTER_ID
 
 		annotation SummarizationSetBy = Automatic
 
 	column SEMESTER_ID
+		isHidden
 		dataType: dateTime
 		formatString: Long Date
 		sourceProviderType: date
@@ -42,10 +45,12 @@ table d_time
 		lineageTag: c9227363-7394-40bb-bee7-d17c0ad6eb60
 		summarizeBy: none
 		sourceColumn: SEMESTER
+		sortByColumn: SEMESTER_ID
 
 		annotation SummarizationSetBy = Automatic
 
 	column YEAR_ID
+		isHidden
 		dataType: dateTime
 		formatString: Long Date
 		sourceProviderType: date
@@ -62,12 +67,13 @@ table d_time
 		formatString: 0
 		sourceProviderType: int
 		lineageTag: e2a02318-98ba-453c-8d84-3b18df052c8c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: YEAR
 
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
+		isHidden
 		dataType: dateTime
 		formatString: General Date
 		sourceProviderType: datetime2
@@ -78,7 +84,7 @@ table d_time
 		annotation SummarizationSetBy = Automatic
 
 	partition d_time = m
-		mode: directQuery
+		mode: dual
 		source =
 				let
 				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),

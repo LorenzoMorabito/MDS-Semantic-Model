@@ -2,6 +2,7 @@ table d_reconstructed_markets
 	lineageTag: bb56ea9e-0227-4f55-a015-802ed29c381c
 
 	column MARKET_ID
+		isHidden
 		dataType: int64
 		isNullable: false
 		formatString: 0
@@ -40,6 +41,7 @@ table d_reconstructed_markets
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
+		isHidden
 		dataType: dateTime
 		formatString: General Date
 		sourceProviderType: datetime2
@@ -50,7 +52,7 @@ table d_reconstructed_markets
 		annotation SummarizationSetBy = Automatic
 
 	partition d_reconstructed_markets = m
-		mode: directQuery
+		mode: dual
 		source =
 				let
 				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),

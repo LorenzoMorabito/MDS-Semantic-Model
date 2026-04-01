@@ -2,6 +2,7 @@ table d_international_packs
 	lineageTag: 5ff7070a-d7b9-47f0-929a-19f81e09b17a
 
 	column INTERNATIONAL_PACK_ID
+		isHidden
 		dataType: int64
 		isNullable: false
 		formatString: 0
@@ -49,6 +50,7 @@ table d_international_packs
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
+		isHidden
 		dataType: dateTime
 		formatString: General Date
 		sourceProviderType: datetime2
@@ -59,7 +61,7 @@ table d_international_packs
 		annotation SummarizationSetBy = Automatic
 
 	partition d_international_packs = m
-		mode: directQuery
+		mode: dual
 		source =
 				let
 				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),

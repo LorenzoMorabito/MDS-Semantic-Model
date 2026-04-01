@@ -2,6 +2,7 @@ table d_categories_l3
 	lineageTag: 8504d684-31d0-4c10-9516-ab4b7c61c415
 
 	column CATEGORY_L3_ID
+		isHidden
 		dataType: int64
 		isNullable: false
 		formatString: 0
@@ -23,6 +24,7 @@ table d_categories_l3
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
+		isHidden
 		dataType: dateTime
 		formatString: General Date
 		sourceProviderType: datetime2
@@ -33,7 +35,7 @@ table d_categories_l3
 		annotation SummarizationSetBy = Automatic
 
 	partition d_categories_l3 = m
-		mode: directQuery
+		mode: dual
 		source =
 				let
 				    Source = DatabricksMultiCloud.Catalogs("1276122062834378.8.gcp.databricks.com", "/sql/1.0/warehouses/f1d8b6efcc7c3f3e", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0", MetricViewBiCompatibilityMode=null]),

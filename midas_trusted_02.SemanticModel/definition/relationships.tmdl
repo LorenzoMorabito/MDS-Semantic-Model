@@ -220,3 +220,7 @@ relationship 439bccae-91d8-4455-8382-ccb123582626
 
 	annotation PBI_IsFromSource = FS
 
+relationship e3d4a1fd-1fef-4f79-96c4-bdb50ff0d5d
+	fromColumn: f_midas_sales.QUARTER_ID
+	toColumn: d_time.QUARTER_ID
+

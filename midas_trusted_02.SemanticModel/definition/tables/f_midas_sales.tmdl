@@ -1,7 +1,9 @@
 table f_midas_sales
+	isHidden
 	lineageTag: c2597620-aa63-4ccd-99d0-834cd6d6aed6
 
 	column MIDAS_SALES_ID
+		isHidden
 		dataType: string
 		isNullable: false
 		sourceProviderType: nvarchar(max)
@@ -12,6 +14,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column ATC4_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -22,6 +25,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column CHANNEL_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -32,6 +36,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INTERNATIONAL_PRESCRIPTION_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -42,6 +47,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column DISEASE_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -52,6 +58,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column NFC123_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -62,6 +69,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column MANUFACTURER_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -72,6 +80,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column MOLECULE_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -82,6 +91,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column LICENSING_STATUS_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -92,6 +102,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column DIAG4_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -102,6 +113,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column SPECIALTY_PRODUCT_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -112,6 +124,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column MOLECULE_PATENT_EXPIRY_DATE_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -122,6 +135,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column GENERIC_PRODUCT_CLASSIFICATION_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -132,6 +146,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column BIOCOMPARABLE_PRODUCT_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -142,6 +157,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column NON_BIOCOMPARABLE_PRODUCT_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -152,6 +168,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column BIOSIMILAR_REFERENCE_GROUP_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -162,6 +179,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column DISEASE_RATIO_SOURCE_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -172,6 +190,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column REGIMEN_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -182,6 +201,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column PROTECTION_CURRENT_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -192,6 +212,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INTERNATIONAL_BRAND_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -202,6 +223,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column PRODUCT_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -212,6 +234,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column CORPORATION_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -222,6 +245,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column COUNTRY_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -232,6 +256,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INTERNATIONAL_PACK_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -242,6 +267,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INTERNATIONAL_PRODUCT_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -252,6 +278,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column BIOLOGIC_MOLECULE_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -262,6 +289,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column BIOLOGIC_PRODUCT_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -272,6 +300,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INNOVATION_INSIGHTS_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -282,6 +311,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column NAME_TYPE_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -292,6 +322,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -302,6 +333,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column PROTECTION_HISTORICAL_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -312,6 +344,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column PRE_POST_PROTECTION_EXPIRY_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -322,6 +355,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column ESTIMATED_PROTECTION_EXPIRY_DATE_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -332,6 +366,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column LAUNCH_STATUS_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -342,6 +377,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column MARKET_ID
+		isHidden
 		dataType: int64
 		formatString: 0
 		sourceProviderType: bigint
@@ -352,6 +388,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column QUARTER_ID
+		isHidden
 		dataType: dateTime
 		formatString: Long Date
 		sourceProviderType: date
@@ -464,6 +501,7 @@ table f_midas_sales
 		annotation UnderlyingDateTimeDataType = Date
 
 	column CATEGORY_ID
+		isHidden
 		dataType: int64
 		isNullable: false
 		formatString: 0
@@ -475,6 +513,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column CATEGORY_L2_ID
+		isHidden
 		dataType: int64
 		isNullable: false
 		formatString: 0
@@ -486,6 +525,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column CATEGORY_L3_ID
+		isHidden
 		dataType: int64
 		isNullable: false
 		formatString: 0
@@ -497,6 +537,7 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
+		isHidden
 		dataType: dateTime
 		formatString: General Date
 		sourceProviderType: datetime2
