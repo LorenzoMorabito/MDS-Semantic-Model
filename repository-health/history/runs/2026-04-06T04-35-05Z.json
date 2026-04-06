@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-04-06T04:35:05Z",
+  "repository": "LorenzoMorabito/MDS-Semantic-Model",
+  "mode": "schedule",
+  "branch": "master",
+  "commit": "856448e76231a7639c1de6a92b4c4472d575565d",
+  "git_core": {
+    "size_pack_mb": 0.07,
+    "object_count": 153,
+    "packed_object_count": 153,
+    "pack_count": 1,
+    "loose_object_count": 0
+  },
+  "repo": {
+    "git_size_mb": 0.11,
+    "tracked_file_count": 78,
+    "working_file_count": 75,
+    "commit_count": 51,
+    "largest_current_file_mb": 0.03,
+    "top_current_files": [
+      {
+        "path": "repository-health/scripts/RepoHealth.Common.ps1",
+        "size_mb": 0.03,
+        "size_b": 33834
+      },
+      {
+        "path": "repository-health/scripts/Build-RepoHealthDashboard.ps1",
+        "size_mb": 0.03,
+        "size_b": 29096
+      },
+      {
+        "path": "midas_trusted_02.Report/StaticResources/SharedResources/BaseThemes/CY26SU02.json",
+        "size_mb": 0.02,
+        "size_b": 19330
+      },
+      {
+        "path": "midas_trusted_02.SemanticModel/definition/tables/f_midas_sales.tmdl",
+        "size_mb": 0.01,
+        "size_b": 14358
+      },
+      {
+        "path": "tools/Publish-GitHubProjectTracking.ps1",
+        "size_mb": 0.01,
+        "size_b": 12207
+      },
+      {
+        "path": "repository-health/analyzer.ps1",
+        "size_mb": 0.01,
+        "size_b": 8747
+      },
+      {
+        "path": "midas_trusted_02.SemanticModel/definition/relationships.tmdl",
+        "size_mb": 0.01,
+        "size_b": 7135
+      },
+      {
+        "path": "docs/project-management/backlog/midas-work-items.csv",
+        "size_mb": 0.0,
+        "size_b": 5001
+      },
+      {
+        "path": ".github/workflows/repo-health-schedule.yml",
+        "size_mb": 0.0,
+        "size_b": 4442
+      },
+      {
+        "path": "repository-health/RUNBOOK.md",
+        "size_mb": 0.0,
+        "size_b": 4061
+      }
+    ],
+    "forbidden_files": [
+      {
+        "path": "docs/project-management/backlog/midas-work-items.csv",
+        "size_mb": 0.0,
+        "extension": ".csv"
+      }
+    ],
+    "tracked_excluded_files": [
+      "midas_trusted_02.SemanticModel/.pbi/editorSettings.json"
+    ]
+  },
+  "history": {
+    "max_blob_mb": 0.03,
+    "max_blob_path": "repository-health/scripts/RepoHealth.Common.ps1",
+    "blob_over_1mb": 0,
+    "blob_over_5mb": 0,
+    "blob_over_max": 0,
+    "largest_blobs": [
+      {
+        "sha": "cea8bb48cf2917a74279e85eb9161b0467f0e7d6",
+        "path": "repository-health/scripts/RepoHealth.Common.ps1",
+        "size_b": 32924,
+        "size_mb": 0.03
+      },
+      {
+        "sha": "896642581fa9e9dada37434353edc38688b8b3d8",
+        "path": "repository-health/scripts/Build-RepoHealthDashboard.ps1",
+        "size_b": 28439,
+        "size_mb": 0.03
+      },
+      {
+        "sha": "3e5b0937e97d93d03de8a442ea015afd73de09bd",
+        "path": "midas_trusted_02.Report/StaticResources/SharedResources/BaseThemes/CY26SU02.json",
+        "size_b": 18390,
+        "size_mb": 0.02
+      },
+      {
+        "sha": "075bf6d05075e1283ad4f382ca1a3f4488b79ab5",
+        "path": "midas_trusted_02.SemanticModel/definition/tables/f_midas_sales.tmdl",
+        "size_b": 13796,
+        "size_mb": 0.01
+      },
+      {
+        "sha": "647ede951135d86c14a2e6c08da627e431308f58",
+        "path": "midas_trusted_02.SemanticModel/definition/tables/f_midas_sales.tmdl",
+        "size_b": 13346,
+        "size_mb": 0.01
+      },
+      {
+        "sha": "daa8c7df7673499fe514a3ac747d6ef2ebc84474",
+        "path": "tools/Publish-GitHubProjectTracking.ps1",
+        "size_b": 11760,
+        "size_mb": 0.01
+      },
+      {
+        "sha": "4f83aca5921e71c67d1b0e30b1a902c2e9d62877",
+        "path": "repository-health/analyzer.ps1",
+        "size_b": 8542,
+        "size_mb": 0.01
+      },
+      {
+        "sha": "0d55f964a4de522c8259fe43bdf678132452b651",
+        "path": "midas_trusted_02.SemanticModel/definition/relationships.tmdl",
+        "size_b": 6909,
+        "size_mb": 0.01
+      },
+      {
+        "sha": "fe4fe6c3f4f1abbaeeae435757005b5198b382b7",
+        "path": "midas_trusted_02.SemanticModel/definition/relationships.tmdl",
+        "size_b": 6792,
+        "size_mb": 0.01
+      },
+      {
+        "sha": "bb554ff4f3bf5007955a179cdda52967093c11b5",
+        "path": "docs/project-management/backlog/midas-work-items.csv",
+        "size_b": 4968,
+        "size_mb": 0.0
+      }
+    ]
+  },
+  "growth": {
+    "hasBaseline": false,
+    "size_pack_growth_pct": null,
+    "git_size_growth_pct": null
+  },
+  "file_growth": {
+    "hasBaseline": false,
+    "baseline_commit": null,
+    "baseline_timestamp": null,
+    "new_entries_count": 0,
+    "grown_entries_count": 0,
+    "shrunk_entries_count": 0,
+    "unchanged_count": 0,
+    "changes": []
+  },
+  "policy": {
+    "status": "FAIL",
+    "fail_reasons": [
+      "Forbidden extensions detected in working tree: docs/project-management/backlog/midas-work-items.csv",
+      "Tracked files found in excluded paths: midas_trusted_02.SemanticModel/.pbi/editorSettings.json"
+    ],
+    "warning_reasons": []
+  },
+  "git_sizer": {
+    "available": true,
+    "output_path": ".\\repository-health\\outputs\\current\\git-sizer.txt"
+  }
+}

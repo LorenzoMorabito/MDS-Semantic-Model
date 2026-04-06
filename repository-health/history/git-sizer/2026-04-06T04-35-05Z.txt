@@ -1,0 +1,52 @@
+Processing blobs: 119                        
+Processing trees: 31                        
+Processing commits: 3                        
+Matching commits to trees: 3                        
+Processing annotated tags: 0                        
+Processing references: 2                        
+| Name                         | Value     | Level of concern               |
+| ---------------------------- | --------- | ------------------------------ |
+| Overall repository size      |           |                                |
+| * Commits                    |           |                                |
+|   * Count                    |     3     |                                |
+|   * Total size               |   710 B   |                                |
+| * Trees                      |           |                                |
+|   * Count                    |    31     |                                |
+|   * Total size               |  7.32 KiB |                                |
+|   * Total tree entries       |   161     |                                |
+| * Blobs                      |           |                                |
+|   * Count                    |   119     |                                |
+|   * Total size               |   312 KiB |                                |
+| * Annotated tags             |           |                                |
+|   * Count                    |     0     |                                |
+| * References                 |           |                                |
+|   * Count                    |     2     |                                |
+|     * Branches               |     1     |                                |
+|     * Remote-tracking refs   |     1     |                                |
+|                              |           |                                |
+| Biggest objects              |           |                                |
+| * Commits                    |           |                                |
+|   * Maximum size         [1] |   270 B   |                                |
+|   * Maximum parents      [1] |     1     |                                |
+| * Trees                      |           |                                |
+|   * Maximum entries      [2] |    40     |                                |
+| * Blobs                      |           |                                |
+|   * Maximum size         [3] |  32.2 KiB |                                |
+|                              |           |                                |
+| History structure            |           |                                |
+| * Maximum history depth      |     3     |                                |
+| * Maximum tag depth          |     0     |                                |
+|                              |           |                                |
+| Biggest checkouts            |           |                                |
+| * Number of directories  [4] |    26     |                                |
+| * Maximum path depth     [4] |     5     |                                |
+| * Maximum path length    [4] |    88 B   |                                |
+| * Number of files        [4] |    78     |                                |
+| * Total size of files    [4] |   227 KiB |                                |
+| * Number of symlinks         |     0     |                                |
+| * Number of submodules       |     0     |                                |
+
+[1]  856448e76231a7639c1de6a92b4c4472d575565d (refs/heads/master)
+[2]  13b924a527346785d67fca43ea2953ec7c7a1f43 (refs/heads/master:midas_trusted_02.SemanticModel/definition/tables)
+[3]  cea8bb48cf2917a74279e85eb9161b0467f0e7d6 (refs/heads/master:repository-health/scripts/RepoHealth.Common.ps1)
+[4]  4ef6ecd823dde2ca5a67eecd32d3bfe2a2478db3 (refs/heads/master^{tree})
