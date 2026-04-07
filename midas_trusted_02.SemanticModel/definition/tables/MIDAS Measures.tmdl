@@ -6,20 +6,35 @@ table 'MIDAS Measures'
 		displayFolder: Base
 		lineageTag: 7e2a5eca-a943-49e3-9961-36c03b4cbe56
 
+	measure CU = [Counting Units]
+		formatString: #,0;-#,0;0
+		displayFolder: Base
+		lineageTag: 65533c6d-6128-4e94-84de-af77a7164f94
+
 	measure 'Counting Units' = SUM ( f_midas_sales[COUNTING_UNITS] )
 		formatString: #,0;-#,0;0
 		displayFolder: Base
 		lineageTag: 8220be05-70fe-48cc-9b34-734a95cf4200
+
+	measure SU = [Standard Units]
+		formatString: #,0;-#,0;0
+		displayFolder: Base
+		lineageTag: b86d0ccc-c302-4830-9816-11eb2a7fe6b7
 
 	measure 'Standard Units' = SUM ( f_midas_sales[STANDARD_UNITS] )
 		formatString: #,0;-#,0;0
 		displayFolder: Base
 		lineageTag: 76731f5c-f338-4f95-a933-d4c6b09d3d92
 
-	measure 'Sales LE' = SUM ( f_midas_sales[SALES_EURO] )
+	measure 'Sales E' = SUM ( f_midas_sales[SALES_EURO] )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: Base
 		lineageTag: ed434b9c-ddb8-4c74-ab51-0504bdf21710
+
+	measure 'Sales LE' = SUM ( f_midas_sales[SALES_EURO_COSTANT_LOCAL_CURRENCY] )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Base
+		lineageTag: 24f85f6a-ac54-44cc-a83c-3e4c9bf52ecf
 
 	measure 'Sales USD' = SUM ( f_midas_sales[SALES_US_DOLLARS] )
 		formatString: #,0.0;-#,0.0;0.0
@@ -31,10 +46,35 @@ table 'MIDAS Measures'
 		displayFolder: Base
 		lineageTag: 19e87f59-ca8c-479d-8cc7-a6df924fd384
 
-	measure 'Sales Euro Constant Local Currency' = SUM ( f_midas_sales[SALES_EURO_COSTANT_LOCAL_CURRENCY] )
+	measure 'Sales LC' = [Sales Local Currency]
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: Base
+		lineageTag: 489deaf6-8cfb-4981-aeff-159e3fcdb603
+
+	measure 'Sales Euro Constant Local Currency' = SUM ( f_midas_sales[SALES_EURO_COSTANT_LOCAL_CURRENCY] )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Technical
 		lineageTag: d490eb4c-7052-4790-8d42-d5cc1a258220
+
+	measure 'Sales LC Rows Missing' =
+			CALCULATE ( COUNTROWS ( f_midas_sales ), KEEPFILTERS ( ISBLANK ( f_midas_sales[SALES_LOCAL_CURRENCY] ) ) )
+		formatString: #,0;-#,0;0
+		displayFolder: 'Data Quality'
+		lineageTag: 9178d91f-49c2-42dd-a1f7-889dbd50d345
+
+	measure 'Sales LC Rows Populated' =
+			CALCULATE ( COUNTROWS ( f_midas_sales ), KEEPFILTERS ( NOT ISBLANK ( f_midas_sales[SALES_LOCAL_CURRENCY] ) ) )
+		formatString: #,0;-#,0;0
+		displayFolder: 'Data Quality'
+		lineageTag: ab8240c6-9baa-4ed3-b7ae-31ce9931da54
+
+	measure 'Sales LC Coverage %' =
+			VAR TotalRows = [Sales LC Rows Missing] + [Sales LC Rows Populated]
+			RETURN
+			    DIVIDE ( [Sales LC Rows Populated], TotalRows )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Data Quality'
+		lineageTag: d301b45c-dd97-4f48-a7ce-44d8d56e2ef6
 
 	measure 'Total Daily Doses' = SUM ( f_midas_sales[TOTAL_NUMBER_OF_DAILY_DOSES] )
 		formatString: #,0.0;-#,0.0;0.0
@@ -47,11 +87,21 @@ table 'MIDAS Measures'
 		displayFolder: 'Previous Period'
 		lineageTag: 9ac8717b-fb9f-4c1b-9b22-b76863f3640e
 
+	measure 'CU -1' = [Counting Units -1]
+		formatString: #,0;-#,0;0
+		displayFolder: 'Previous Period'
+		lineageTag: 812ce258-0fda-4476-baa3-671d39df72c0
+
 	measure 'Counting Units -1' =
 			CALCULATE ( [Counting Units], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
 		formatString: #,0;-#,0;0
 		displayFolder: 'Previous Period'
 		lineageTag: 6a2f4ce1-8188-4253-b4fc-a89f8ebfbb2d
+
+	measure 'SU -1' = [Standard Units -1]
+		formatString: #,0;-#,0;0
+		displayFolder: 'Previous Period'
+		lineageTag: 1fb95c79-d0e6-477f-ad6d-b6331d771ecc
 
 	measure 'Standard Units -1' =
 			CALCULATE ( [Standard Units], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
@@ -64,6 +114,18 @@ table 'MIDAS Measures'
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: 'Previous Period'
 		lineageTag: 5aec62df-cbdf-4545-9514-71545d9ad459
+
+	measure 'Sales E -1' =
+			CALCULATE ( [Sales E], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'Previous Period'
+		lineageTag: a60c1a60-d22f-4696-b21d-ec50f0a4bcb0
+
+	measure 'Sales LC -1' =
+			CALCULATE ( [Sales LC], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'Previous Period'
+		lineageTag: d154ab4f-7b8c-424b-bfa0-0e93f5165374
 
 	column Column
 		isHidden
