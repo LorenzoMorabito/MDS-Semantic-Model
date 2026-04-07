@@ -13,7 +13,7 @@ table d_nfc123
 
 		annotation SummarizationSetBy = Automatic
 
-	column NFC123
+	column NFC
 		dataType: string
 		sourceProviderType: nvarchar(max)
 		lineageTag: 60ebae20-1772-41bb-906d-ce63cc3c8325

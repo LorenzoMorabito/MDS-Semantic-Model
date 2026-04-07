@@ -13,7 +13,7 @@ table d_categories_l3
 
 		annotation SummarizationSetBy = Automatic
 
-	column CATEGORY_L3
+	column 'Category L3'
 		dataType: string
 		isNullable: false
 		sourceProviderType: nvarchar(max)

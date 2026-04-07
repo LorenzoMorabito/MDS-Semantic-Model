@@ -41,6 +41,30 @@ table 'MIDAS Measures'
 		displayFolder: Base
 		lineageTag: faef8e88-f9ec-495a-913b-a8b74782d22e
 
+	measure 'Units -1' =
+			CALCULATE ( [Units], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+		formatString: #,0;-#,0;0
+		displayFolder: 'Previous Period'
+		lineageTag: 9ac8717b-fb9f-4c1b-9b22-b76863f3640e
+
+	measure 'Counting Units -1' =
+			CALCULATE ( [Counting Units], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+		formatString: #,0;-#,0;0
+		displayFolder: 'Previous Period'
+		lineageTag: 6a2f4ce1-8188-4253-b4fc-a89f8ebfbb2d
+
+	measure 'Standard Units -1' =
+			CALCULATE ( [Standard Units], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+		formatString: #,0;-#,0;0
+		displayFolder: 'Previous Period'
+		lineageTag: f234b151-57f7-4758-9d60-6cbf2727ed38
+
+	measure 'Sales LE -1' =
+			CALCULATE ( [Sales LE], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'Previous Period'
+		lineageTag: 5aec62df-cbdf-4545-9514-71545d9ad459
+
 	column Column
 		isHidden
 		formatString: 0

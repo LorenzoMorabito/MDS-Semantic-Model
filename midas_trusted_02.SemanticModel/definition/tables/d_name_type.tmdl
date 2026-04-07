@@ -1,5 +1,4 @@
 table d_name_type
-	isHidden
 	lineageTag: f2f8e067-110e-41f7-bb61-1238bd23180e
 
 	column NAME_TYPE_ID

@@ -22,7 +22,7 @@ table d_molecules
 
 		annotation SummarizationSetBy = Automatic
 
-	column CORPORATE_MOLECULE
+	column 'Corporate International Molecule'
 		dataType: string
 		sourceProviderType: nvarchar(max)
 		lineageTag: 7951f2a0-f5a2-4584-9466-4aaf4325dcc3

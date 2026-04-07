@@ -13,7 +13,7 @@ table d_international_prescriptions
 
 		annotation SummarizationSetBy = Automatic
 
-	column INTERNATIONAL_PRESCRIPTION
+	column Prescription
 		dataType: string
 		sourceProviderType: nvarchar(max)
 		lineageTag: be5735dd-e22d-483d-be7e-8741de1f4b71
@@ -22,7 +22,7 @@ table d_international_prescriptions
 
 		annotation SummarizationSetBy = Automatic
 
-	column OUR_PRESCRIPTION
+	column 'Our Prescription'
 		dataType: string
 		sourceProviderType: nvarchar(max)
 		lineageTag: 8e951723-dcd9-4715-a988-09a572ae1b6e
