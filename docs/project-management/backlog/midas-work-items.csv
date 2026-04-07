@@ -1,7 +1,7 @@
 id,parent_id,milestone,priority,status,item_type,title,depends_on,comment
 MIDAS-001,EPIC-001,M0,P0,open,data_issue,Deduplicate f_midas_sales on MIDAS_SALES_ID,upstream_databricks_fix,"Critical upstream blocker; duplicate PK surplus currently 32,223"
 MIDAS-002,EPIC-001,M0,P0,open,data_issue,Repair d_time coverage for QUARTER_ID,upstream_databricks_fix,"Critical upstream blocker; orphan quarter rows currently 26,245,612"
-MIDAS-003,EPIC-001,M0,P1,open,data_decision,Clarify business semantics of local currency nulls,business_and_data_eng,`Sales LC` source field exists in trusted_02 but business-facing publication remains blocked until null-handling rule is agreed
+MIDAS-003,EPIC-001,M0,P1,open,data_decision,Clarify business semantics of local currency nulls,business_and_data_eng,`Sales LC` is now exposed for parity progression but still needs upstream clarification before production-clean signoff
 MIDAS-004,EPIC-001,M0,P0,open,platform_decision,Lock final warehouse and connection strategy,team_decision,Current pbip points to a different warehouse than the latest assessment
 MIDAS-005,EPIC-001,M0,P0,open,platform_decision,Lock storage mode strategy,team_decision,Current model is DirectQuery; this must be an explicit choice
 MIDAS-006,EPIC-001,M1,P0,in_progress,model_design,Add governed logical time relationship strategy,MIDAS-002,"Logical quarter relationship implemented in Sprint 1, but upstream d_time coverage defect still blocks final closure"
@@ -10,10 +10,10 @@ MIDAS-008,EPIC-001,M1,P0,in_progress,model_task,Apply hide/show policy to surrog
 MIDAS-009,EPIC-001,M1,P1,in_progress,model_task,Create measure folders and naming standard in the model,MIDAS-007,Initial measure table created in Sprint 1; final naming and folder standard still to complete
 MIDAS-010,EPIC-001,M1,P1,open,model_task,Curate dimensions for business readability,MIDAS-007,"Focus on channel, country, market, product, molecule, corporation and time"
 MIDAS-011,EPIC-001,M2,P0,done,measure_family,Implement Units family,MIDAS-006,Base Units measures implemented and desktop-validated in Sprint 1
-MIDAS-012,EPIC-001,M2,P0,in_progress,measure_family,Implement Values family,MIDAS-006,"Base additive value measures implemented with `Sales E = SALES_EURO`, `Sales LE = SALES_EURO_COSTANT_LOCAL_CURRENCY` and `Sales LC = SALES_LOCAL_CURRENCY`; source-side null semantics remain an upstream clarification item"
+MIDAS-012,EPIC-001,M2,P0,in_progress,measure_family,Implement Values family,MIDAS-006,"Base additive value measures implemented with `Sales E = SALES_EURO`, `Sales LE = SALES_EURO_COSTANT_LOCAL_CURRENCY` and `Sales LC = SALES_LOCAL_CURRENCY`; core cumulative family now started, while source-side null semantics remain an upstream clarification item"
 MIDAS-013,EPIC-001,M2,P0,open,measure_family,Implement Market Share % family,MIDAS-011|MIDAS-012,Core release family; scope logic must be documented
 MIDAS-014,EPIC-001,M2,P1,open,measure_family,Implement Evolution Index family,MIDAS-013,Release 1 target once share logic is stable
-MIDAS-015,EPIC-001,M2,P1,open,measure_family,Implement Delta % vs PY family,MIDAS-012|MIDAS-006,Core comparator family for Release 1
+MIDAS-015,EPIC-001,M2,P1,in_progress,measure_family,Implement Delta % vs PY family,MIDAS-012|MIDAS-006,"Core comparator family started for Units, CU, SU, Sales E, Sales LE and Sales LC using quarter-native previous-year logic"
 MIDAS-016,EPIC-001,M2,P1,in_progress,ux_task,Create thin business-facing measures for core MIDAS battery,MIDAS-011|MIDAS-012|MIDAS-013|MIDAS-014|MIDAS-015,"Thin parity aliases started for `CU`, `SU`, `Sales LC` and previous-period variants; extended families still pending"
 MIDAS-017,EPIC-001,M3,P1,open,measure_family,Implement Values 3MM,MIDAS-012,Important parity gap from legacy inventory
 MIDAS-018,EPIC-001,M3,P1,open,measure_family,Implement Delta % vs PP,MIDAS-012|MIDAS-006,Requires explicit previous-period design

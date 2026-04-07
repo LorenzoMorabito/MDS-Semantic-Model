@@ -127,6 +127,162 @@ table 'MIDAS Measures'
 		displayFolder: 'Previous Period'
 		lineageTag: d154ab4f-7b8c-424b-bfa0-0e93f5165374
 
+	measure 'Units Delta % vs PY' =
+			VAR PriorYear = CALCULATE ( [Units], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    DIVIDE ( [Units] - PriorYear, PriorYear )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Delta vs PY'
+		lineageTag: c8129651-11ff-4ea6-bf7f-8d656c4ef2f6
+
+	measure 'CU Delta % vs PY' =
+			VAR PriorYear = CALCULATE ( [CU], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    DIVIDE ( [CU] - PriorYear, PriorYear )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Delta vs PY'
+		lineageTag: 8e91e9c8-c35b-4429-8d4f-e718de12bf03
+
+	measure 'SU Delta % vs PY' =
+			VAR PriorYear = CALCULATE ( [SU], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    DIVIDE ( [SU] - PriorYear, PriorYear )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Delta vs PY'
+		lineageTag: 3d9aeae6-e0ba-4faf-bce3-79d3cd2dbb68
+
+	measure 'Sales E Delta % vs PY' =
+			VAR PriorYear = CALCULATE ( [Sales E], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    DIVIDE ( [Sales E] - PriorYear, PriorYear )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Delta vs PY'
+		lineageTag: 58fcdf3c-dde7-4979-87f2-75bc980c175e
+
+	measure 'Sales LE Delta % vs PY' =
+			VAR PriorYear = CALCULATE ( [Sales LE], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    DIVIDE ( [Sales LE] - PriorYear, PriorYear )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Delta vs PY'
+		lineageTag: 860869d8-ae09-4059-8c94-0108bd7f81ff
+
+	measure 'Sales LC Delta % vs PY' =
+			VAR PriorYear = CALCULATE ( [Sales LC], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    DIVIDE ( [Sales LC] - PriorYear, PriorYear )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Delta vs PY'
+		lineageTag: c8ea1ded-df88-4b7c-84a2-17bf26bce4ee
+
+	measure 'Units CUM' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( d_time[YEAR] )
+			RETURN
+			    CALCULATE (
+			        [Units],
+			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			    )
+		formatString: #,0;-#,0;0
+		displayFolder: Cumulative
+		lineageTag: 1e8feb6c-96d3-4e18-b259-327e4a0bd7fe
+
+	measure 'Units CUM -1' =
+			CALCULATE ( [Units CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0;-#,0;0
+		displayFolder: Cumulative
+		lineageTag: 4e317071-226c-4a82-b78d-1afe5adfe7f5
+
+	measure 'CU CUM' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( d_time[YEAR] )
+			RETURN
+			    CALCULATE (
+			        [CU],
+			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			    )
+		formatString: #,0;-#,0;0
+		displayFolder: Cumulative
+		lineageTag: 63b9361f-f3a8-450b-aa90-217134f1c502
+
+	measure 'CU CUM -1' =
+			CALCULATE ( [CU CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0;-#,0;0
+		displayFolder: Cumulative
+		lineageTag: 2c1ab984-bb4f-4353-8afc-6c4e46fe64ea
+
+	measure 'SU CUM' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( d_time[YEAR] )
+			RETURN
+			    CALCULATE (
+			        [SU],
+			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			    )
+		formatString: #,0;-#,0;0
+		displayFolder: Cumulative
+		lineageTag: 571c526d-43f4-47ba-8c93-2b2b994130b4
+
+	measure 'SU CUM -1' =
+			CALCULATE ( [SU CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0;-#,0;0
+		displayFolder: Cumulative
+		lineageTag: c3909101-8915-4cbf-b84e-f316f2ff7f83
+
+	measure 'Sales E CUM' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( d_time[YEAR] )
+			RETURN
+			    CALCULATE (
+			        [Sales E],
+			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			    )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Cumulative
+		lineageTag: bc715450-bcda-4feb-94ef-cf25db1ad5e3
+
+	measure 'Sales E CUM -1' =
+			CALCULATE ( [Sales E CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Cumulative
+		lineageTag: 54ca0e14-57a4-4731-aa4a-c280f6a47e01
+
+	measure 'Sales LE CUM' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( d_time[YEAR] )
+			RETURN
+			    CALCULATE (
+			        [Sales LE],
+			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			    )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Cumulative
+		lineageTag: 2ec913de-ff85-449c-97b4-4810371ceb9a
+
+	measure 'Sales LE CUM -1' =
+			CALCULATE ( [Sales LE CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Cumulative
+		lineageTag: d0bd5da0-df07-4f1f-8717-6d2ae9bff238
+
+	measure 'Sales LC CUM' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( d_time[YEAR] )
+			RETURN
+			    CALCULATE (
+			        [Sales LC],
+			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			    )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Cumulative
+		lineageTag: 2f0b8ef5-8ee8-43a5-816c-5827d5dbd4e1
+
+	measure 'Sales LC CUM -1' =
+			CALCULATE ( [Sales LC CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: Cumulative
+		lineageTag: a8f560fe-cf5d-4f48-aaf3-bd9f0b91e652
+
 	column Column
 		isHidden
 		formatString: 0
