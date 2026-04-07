@@ -283,6 +283,90 @@ table 'MIDAS Measures'
 		displayFolder: Cumulative
 		lineageTag: a8f560fe-cf5d-4f48-aaf3-bd9f0b91e652
 
+	measure 'Units MAT' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			RETURN
+			    CALCULATE ( [Units], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+		formatString: #,0;-#,0;0
+		displayFolder: MAT
+		lineageTag: 02dc38f6-5f8e-4038-8f07-c9ba268ddcc5
+
+	measure 'Units MAT -1' =
+			CALCULATE ( [Units MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0;-#,0;0
+		displayFolder: MAT
+		lineageTag: c9f25485-76e7-42c9-a321-26111bc7ef0a
+
+	measure 'CU MAT' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			RETURN
+			    CALCULATE ( [CU], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+		formatString: #,0;-#,0;0
+		displayFolder: MAT
+		lineageTag: a0e18e2b-bfc0-422e-af97-98db96b7e330
+
+	measure 'CU MAT -1' =
+			CALCULATE ( [CU MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0;-#,0;0
+		displayFolder: MAT
+		lineageTag: c4e3d1ab-9050-4d6d-b696-a22120f6c414
+
+	measure 'SU MAT' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			RETURN
+			    CALCULATE ( [SU], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+		formatString: #,0;-#,0;0
+		displayFolder: MAT
+		lineageTag: 72cad207-6b2b-4d1f-b023-4d5f7e226f3f
+
+	measure 'SU MAT -1' =
+			CALCULATE ( [SU MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0;-#,0;0
+		displayFolder: MAT
+		lineageTag: 20bba8ca-6fd9-4516-8ee8-6d881358af3f
+
+	measure 'Sales E MAT' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			RETURN
+			    CALCULATE ( [Sales E], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: MAT
+		lineageTag: 3f3782c8-7007-4e2a-83b4-f19d804f021c
+
+	measure 'Sales E MAT -1' =
+			CALCULATE ( [Sales E MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: MAT
+		lineageTag: 4c78fb51-cd9b-49f2-aa58-e53e26145f6a
+
+	measure 'Sales LE MAT' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			RETURN
+			    CALCULATE ( [Sales LE], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: MAT
+		lineageTag: 01a58668-d25d-433b-bf27-c8ea923f4447
+
+	measure 'Sales LE MAT -1' =
+			CALCULATE ( [Sales LE MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: MAT
+		lineageTag: 05976461-4ad3-4277-97e5-6e0a1eb6834d
+
+	measure 'Sales LC MAT' =
+			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			RETURN
+			    CALCULATE ( [Sales LC], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: MAT
+		lineageTag: 9c0b3021-a089-40cd-afd7-6121fda8945c
+
+	measure 'Sales LC MAT -1' =
+			CALCULATE ( [Sales LC MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: MAT
+		lineageTag: 19447267-4afc-4608-b07c-8871f78acfb5
+
 	column Column
 		isHidden
 		formatString: 0
