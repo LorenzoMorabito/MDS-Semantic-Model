@@ -3,8 +3,8 @@ table d_biologic_molecules
 	lineageTag: d9df4858-c386-4a3b-9b65-b201c749c662
 
 	column BIOLOGIC_MOLECULE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_biologic_molecules
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 2e7e9e88-af85-48b7-bf33-3cf711f62895

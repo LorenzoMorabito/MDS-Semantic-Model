@@ -3,8 +3,8 @@ table d_non_biocomparable_products
 	lineageTag: e30b8822-cc92-4e05-ac6b-3f251244d17c
 
 	column NON_BIOCOMPARABLE_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_non_biocomparable_products
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 8fb65cb2-edf4-4554-83b8-cb48e7dfce51

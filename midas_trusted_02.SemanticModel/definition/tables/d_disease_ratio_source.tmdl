@@ -3,8 +3,8 @@ table d_disease_ratio_source
 	lineageTag: 702acab8-618d-41fd-b490-689b1133eb36
 
 	column DISEASE_RATIO_SOURCE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_disease_ratio_source
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: db7358ca-164e-4e63-ba1c-0399a23c391b

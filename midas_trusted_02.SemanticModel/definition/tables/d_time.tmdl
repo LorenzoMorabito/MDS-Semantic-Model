@@ -2,8 +2,8 @@ table d_time
 	lineageTag: 66ab9e87-585a-45da-aa5f-87ac76eaf140
 
 	column QUARTER_ID
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		sourceProviderType: date
 		lineageTag: 8206b7ad-5512-4c66-92d4-658eccae2501
@@ -26,8 +26,8 @@ table d_time
 		annotation SummarizationSetBy = Automatic
 
 	column SEMESTER_ID
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		sourceProviderType: date
 		lineageTag: c7696a8a-01ac-47f5-9baf-340e55d16454
@@ -50,8 +50,8 @@ table d_time
 		annotation SummarizationSetBy = Automatic
 
 	column YEAR_ID
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		sourceProviderType: date
 		lineageTag: a4829509-4a48-48ea-b5c6-894ecdb853de
@@ -73,8 +73,8 @@ table d_time
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: b3c6f7e4-6a0f-4034-a462-98c20143686c

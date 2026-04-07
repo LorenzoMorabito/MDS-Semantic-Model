@@ -2,8 +2,8 @@ table d_categories_l2
 	lineageTag: 976630b7-4e1a-4676-bfb8-d4877d3d563b
 
 	column CATEGORY_L2_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_categories_l2
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 742bae59-0d0d-4c3e-8dda-4db4d9ba07c2

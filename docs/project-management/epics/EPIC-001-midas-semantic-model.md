@@ -77,6 +77,15 @@ L'epic puo considerarsi chiuso quando:
 - i blocker dati residui sono documentati
 - il modello ha documentazione sufficiente per essere riusato da altri team
 
+## Sprint status
+
+Stato al `2026-04-01` dopo validazione in Power BI Desktop:
+
+- completato il primo slice tecnico del semantic foundation
+- `MIDAS-011` completato
+- `MIDAS-006`, `MIDAS-007`, `MIDAS-008`, `MIDAS-009` e `MIDAS-012` avviati ma non ancora chiusi
+- restano aperti i blocker sorgente su deduplica fact, copertura `d_time`, semantica delle currency null e decisioni finali su warehouse/storage mode
+
 ## Notes
 
 Questo parent item e pensato per essere facilmente convertito in una issue GitHub epic. I child item hanno ID stabili per permettere il collegamento futuro a issue reali o project items.

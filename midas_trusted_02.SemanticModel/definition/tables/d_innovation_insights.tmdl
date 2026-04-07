@@ -3,8 +3,8 @@ table d_innovation_insights
 	lineageTag: 721679db-3352-4282-b36a-0128ac46c89e
 
 	column INNOVATION_INSIGHTS_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_innovation_insights
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 5a82a069-351a-4755-a6c0-d2b031aa2407

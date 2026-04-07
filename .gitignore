@@ -1,5 +1,6 @@
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+/parity/
 
 # BEGIN REPO-HEALTH
 # Repo health generated outputs are runtime artifacts and should not be committed.

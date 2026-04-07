@@ -3,8 +3,8 @@ table d_regimen
 	lineageTag: ddf317f0-d6d0-4f58-ad73-32b83e031e14
 
 	column REGIMEN_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_regimen
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: dba2e2d3-a286-445f-8a32-9ff776ebed7c

@@ -2,8 +2,8 @@ table d_specialty_products
 	lineageTag: 79401204-4d06-49a7-84bc-b78ed6f77947
 
 	column SPECIALTY_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -23,8 +23,8 @@ table d_specialty_products
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 251e2cbe-890d-464c-be85-bc6d48bc096f

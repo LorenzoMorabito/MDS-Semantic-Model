@@ -3,8 +3,8 @@ table d_licensing_status
 	lineageTag: 76b41cd8-50f7-4293-bbb8-352d5d18e5c3
 
 	column LICENSING_STATUS_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_licensing_status
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: adc7c8d3-6840-4392-b6d2-51c226a3d1de

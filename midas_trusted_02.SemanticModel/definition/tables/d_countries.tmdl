@@ -2,8 +2,8 @@ table d_countries
 	lineageTag: ab66475e-c8fd-4063-a36e-9159d969cc46
 
 	column COUNTRY_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -41,8 +41,8 @@ table d_countries
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 4914f4f2-48ab-4780-96a1-6d701c285dce

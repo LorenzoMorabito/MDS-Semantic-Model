@@ -1,0 +1,542 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 368.24227085003315,
+        "y": 62.768567534419951
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 2467.4512150975024,
+            "y": 905.9196482438665
+          },
+          "nodeIndex": "MIDAS Measures",
+          "nodeLineageTag": "5cf789ec-83f8-4950-b83a-5dca322c3871",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 663.5458270240797,
+            "y": -6.0814517021676693
+          },
+          "nodeIndex": "d_all_biocomp_non_biocomp_products",
+          "nodeLineageTag": "1f4d6615-59d6-429e-ba51-e109f9161d40",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1620.1012359602419,
+            "y": 1351.9794703017847
+          },
+          "nodeIndex": "d_atcs",
+          "nodeLineageTag": "a17c3b0d-718e-4f39-ae06-9e2489487458",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1778.0738410419067,
+            "y": 1710.5011915841706
+          },
+          "nodeIndex": "d_biocomparable_products",
+          "nodeLineageTag": "c54e7dc9-13c9-4a2f-9f36-31db3af6f4e0",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1562.8816991524318,
+            "y": 290.85118125674262
+          },
+          "nodeIndex": "d_biologic_molecules",
+          "nodeLineageTag": "d9df4858-c386-4a3b-9b65-b201c749c662",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1516.513513813672,
+            "y": 732.08115363754678
+          },
+          "nodeIndex": "d_biologic_products",
+          "nodeLineageTag": "4b517c4e-e399-40e4-8af7-eecfa38ced15",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2233.4512150975024,
+            "y": 1053.9278294452322
+          },
+          "nodeIndex": "d_biosimilar_reference_groups",
+          "nodeLineageTag": "ad77ff73-5457-4383-9949-93c613c9c521",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 805.92506000807271,
+            "y": 1213.2401425830715
+          },
+          "nodeIndex": "d_categories",
+          "nodeLineageTag": "1f2a3751-1cdd-4298-a06a-dfe845e64966",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1471.5234949542069,
+            "y": 498.75553323829081
+          },
+          "nodeIndex": "d_categories_l2",
+          "nodeLineageTag": "976630b7-4e1a-4676-bfb8-d4877d3d563b",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 306.41234598007441,
+            "y": 999.09406731381614
+          },
+          "nodeIndex": "d_categories_l3",
+          "nodeLineageTag": "8504d684-31d0-4c10-9516-ab4b7c61c415",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1773.785777473571,
+            "y": 499.4697557205152
+          },
+          "nodeIndex": "d_channels",
+          "nodeLineageTag": "e8d748c8-8ad3-48f7-9a0f-231c98fe2d9f",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 891.93858708502512,
+            "y": 983.33755387695476
+          },
+          "nodeIndex": "d_corporations",
+          "nodeLineageTag": "18fc1697-0192-400a-acba-2c9a7ee91a7e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 342.73266316518777,
+            "y": 323.88445313849707
+          },
+          "nodeIndex": "d_countries",
+          "nodeLineageTag": "ab66475e-c8fd-4063-a36e-9159d969cc46",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2166.6259190274131,
+            "y": 1569.43358008986
+          },
+          "nodeIndex": "d_diags",
+          "nodeLineageTag": "6203dff6-2f1c-4909-b1bf-951ce316f327",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 431.04693905778868,
+            "y": 1599.6960182498249
+          },
+          "nodeIndex": "d_disease_ratio_source",
+          "nodeLineageTag": "702acab8-618d-41fd-b490-689b1133eb36",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 995.8599827290119,
+            "y": 363.12726923222658
+          },
+          "nodeIndex": "d_diseases",
+          "nodeLineageTag": "2d3a98ae-0e5b-4cf1-8461-cb8c774dd1a9",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1327.3048697048557,
+            "y": 1517.7933253591225
+          },
+          "nodeIndex": "d_estimated_protection_expiry_date",
+          "nodeLineageTag": "57a6bec8-7fdf-4357-9003-3db7734dcbd3",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 984.84169439352058,
+            "y": 1909.839296487733
+          },
+          "nodeIndex": "d_generic_product_classification",
+          "nodeLineageTag": "c96e13c4-7a96-4017-8c6a-1c4092ed1ead",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 975.5525251943734,
+            "y": -50
+          },
+          "nodeIndex": "d_innovation_insights",
+          "nodeLineageTag": "721679db-3352-4282-b36a-0128ac46c89e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 950.36853024550442,
+            "y": 155.48842539078282
+          },
+          "nodeIndex": "d_international_brands",
+          "nodeLineageTag": "0f2c14ad-e444-49eb-91d9-9adbc2fdde6c",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 733.41111325025054,
+            "y": 1527.3808666688108
+          },
+          "nodeIndex": "d_international_packs",
+          "nodeLineageTag": "5ff7070a-d7b9-47f0-929a-19f81e09b17a",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 695.23651893672172,
+            "y": 1808.3086584515793
+          },
+          "nodeIndex": "d_international_prescriptions",
+          "nodeLineageTag": "c5125d79-3979-4595-a18c-5b29db00910a",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1809.445890566366,
+            "y": 731.94869113391428
+          },
+          "nodeIndex": "d_international_products",
+          "nodeLineageTag": "ffb08322-a319-481a-ab06-7f7368094c0a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 86.978551621517,
+            "y": 580.87970343163306
+          },
+          "nodeIndex": "d_launch_status",
+          "nodeLineageTag": "575d7cb7-85fd-4538-b354-ce96ae55810a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1178.6602810939028,
+            "y": 600.7020249806933
+          },
+          "nodeIndex": "d_licensing_status",
+          "nodeLineageTag": "76b41cd8-50f7-4293-bbb8-352d5d18e5c3",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1262.3752271949545,
+            "y": 106.8514252132743
+          },
+          "nodeIndex": "d_manufacturers",
+          "nodeLineageTag": "566a4051-b784-437e-8496-8dea8cee60cd",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 370.80638659522947,
+            "y": 115.44012171906616
+          },
+          "nodeIndex": "d_molecule_patent_expiry_date",
+          "nodeLineageTag": "b115dc69-4eb4-467e-9ff4-c4b7fad1099d",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 642.95186967410666,
+            "y": 323.9032960788295
+          },
+          "nodeIndex": "d_molecules",
+          "nodeLineageTag": "5f0ea395-31a7-4796-a875-e61f24c362e6",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2233.3889213199309,
+            "y": 1261.1393943985263
+          },
+          "nodeIndex": "d_name_type",
+          "nodeLineageTag": "f2f8e067-110e-41f7-bb61-1238bd23180e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1940.70375976824,
+            "y": 1069.3566665802916
+          },
+          "nodeIndex": "d_nfc123",
+          "nodeLineageTag": "58cef4e6-666a-4adf-815d-1cb9ffc72e07",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1177.4622232760007,
+            "y": 1191.5927140023393
+          },
+          "nodeIndex": "d_non_biocomparable_products",
+          "nodeLineageTag": "e30b8822-cc92-4e05-ac6b-3f251244d17c",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 599.17393870728824,
+            "y": 1005.3354915568241
+          },
+          "nodeIndex": "d_pre_post_protection_expiry",
+          "nodeLineageTag": "6f064e39-8ea6-40a2-8216-ef5504659c05",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 362.82738028680183,
+            "y": 1213.5694931881792
+          },
+          "nodeIndex": "d_products",
+          "nodeLineageTag": "a72d6483-6738-4a99-b9b7-cf474f132eeb",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 349.07122497740033
+          },
+          "nodeIndex": "d_protection_current",
+          "nodeLineageTag": "85acfa4a-1f46-48c0-a14a-6e2717f83f74",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2064.5958670777782,
+            "y": 1798.9879032786782
+          },
+          "nodeIndex": "d_protection_historical",
+          "nodeLineageTag": "daf5fcae-b54a-42cf-b29a-1450a4a8e2bd",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1276.756029507138,
+            "y": 1732.6097077301504
+          },
+          "nodeIndex": "d_reconstructed_markets",
+          "nodeLineageTag": "bb56ea9e-0227-4f55-a015-802ed29c381c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1944.5812067220177,
+            "y": 1361.7663473252444
+          },
+          "nodeIndex": "d_regimen",
+          "nodeLineageTag": "ddf317f0-d6d0-4f58-ad73-32b83e031e14",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1647.9872726548467,
+            "y": 1073.8641588445653
+          },
+          "nodeIndex": "d_specialty_products",
+          "nodeLineageTag": "79401204-4d06-49a7-84bc-b78ed6f77947",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1025.5570607338982,
+            "y": 1422.9650137417448
+          },
+          "nodeIndex": "d_time",
+          "nodeLineageTag": "66ab9e87-585a-45da-aa5f-87ac76eaf140",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1223.647844471958,
+            "y": 833.10225422081839
+          },
+          "nodeIndex": "f_midas_sales",
+          "nodeLineageTag": "c2597620-aa63-4ccd-99d0-834cd6d6aed6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 31.863081771035706,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

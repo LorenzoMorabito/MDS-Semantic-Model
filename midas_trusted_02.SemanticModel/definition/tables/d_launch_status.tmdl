@@ -3,8 +3,8 @@ table d_launch_status
 	lineageTag: 575d7cb7-85fd-4538-b354-ce96ae55810a
 
 	column LAUNCH_STATUS_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_launch_status
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: a9a7a0c5-a10f-44f9-9223-f7de046a1ef5

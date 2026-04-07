@@ -3,8 +3,8 @@ table d_name_type
 	lineageTag: f2f8e067-110e-41f7-bb61-1238bd23180e
 
 	column NAME_TYPE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_name_type
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 9751f85c-2a5e-427d-8cf7-6d0b559d9f0d

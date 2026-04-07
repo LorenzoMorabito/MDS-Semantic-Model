@@ -2,8 +2,8 @@ table d_channels
 	lineageTag: e8d748c8-8ad3-48f7-9a0f-231c98fe2d9f
 
 	column CHANNEL_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -32,8 +32,8 @@ table d_channels
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 097fcd92-bd76-4ba2-b2b2-afc800d2b142

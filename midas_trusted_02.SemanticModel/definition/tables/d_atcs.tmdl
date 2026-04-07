@@ -65,8 +65,8 @@ table d_atcs
 		annotation SummarizationSetBy = Automatic
 
 	column ATC4_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -95,8 +95,8 @@ table d_atcs
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 02b22201-f034-4d2e-981f-014dc9a4ebf5

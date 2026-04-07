@@ -2,8 +2,8 @@ table d_international_packs
 	lineageTag: 5ff7070a-d7b9-47f0-929a-19f81e09b17a
 
 	column INTERNATIONAL_PACK_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -50,8 +50,8 @@ table d_international_packs
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 7db82413-b848-411b-92b5-2a2940a17fd0

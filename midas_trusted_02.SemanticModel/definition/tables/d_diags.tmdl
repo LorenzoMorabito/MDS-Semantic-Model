@@ -2,8 +2,8 @@ table d_diags
 	lineageTag: 6203dff6-2f1c-4909-b1bf-951ce316f327
 
 	column DIAG4_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -32,8 +32,8 @@ table d_diags
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 34f849dd-6eac-442a-afba-221071f908dd

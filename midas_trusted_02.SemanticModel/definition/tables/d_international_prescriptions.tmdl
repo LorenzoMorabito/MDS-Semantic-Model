@@ -2,8 +2,8 @@ table d_international_prescriptions
 	lineageTag: c5125d79-3979-4595-a18c-5b29db00910a
 
 	column INTERNATIONAL_PRESCRIPTION_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -32,8 +32,8 @@ table d_international_prescriptions
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 2ef8ff1a-75df-4eae-9e5b-37f72b979041

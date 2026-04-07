@@ -3,8 +3,8 @@ table d_molecule_patent_expiry_date
 	lineageTag: b115dc69-4eb4-467e-9ff4-c4b7fad1099d
 
 	column MOLECULE_PATENT_EXPIRY_DATE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_molecule_patent_expiry_date
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: b6068086-fb74-42e7-8695-811572ead512

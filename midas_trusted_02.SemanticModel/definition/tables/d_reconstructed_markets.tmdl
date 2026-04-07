@@ -2,8 +2,8 @@ table d_reconstructed_markets
 	lineageTag: bb56ea9e-0227-4f55-a015-802ed29c381c
 
 	column MARKET_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -41,8 +41,8 @@ table d_reconstructed_markets
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: b9f5043c-cdf2-46c3-9889-579638cef4a0

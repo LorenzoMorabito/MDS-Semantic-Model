@@ -2,8 +2,8 @@ table d_international_brands
 	lineageTag: 0f2c14ad-e444-49eb-91d9-9adbc2fdde6c
 
 	column INTERNATIONAL_BRAND_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -23,8 +23,8 @@ table d_international_brands
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: c9c26158-469f-4fca-84af-bb3bf8d811d6

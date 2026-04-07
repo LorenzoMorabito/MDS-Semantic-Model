@@ -3,8 +3,8 @@ table d_biologic_products
 	lineageTag: 4b517c4e-e399-40e4-8af7-eecfa38ced15
 
 	column BIOLOGIC_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_biologic_products
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 945150fa-7fac-4769-aa7f-78447bdfacad

@@ -3,8 +3,8 @@ table d_all_biocomp_non_biocomp_products
 	lineageTag: 1f4d6615-59d6-429e-ba51-e109f9161d40
 
 	column ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_all_biocomp_non_biocomp_products
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 126040b4-e9e6-4588-9e5e-7cf5c134406d

@@ -2,8 +2,8 @@ table d_manufacturers
 	lineageTag: 566a4051-b784-437e-8496-8dea8cee60cd
 
 	column MANUFACTURER_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -42,8 +42,8 @@ table d_manufacturers
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 6e54c5e8-1649-4f3a-bf33-6b2603c93410

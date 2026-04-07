@@ -3,8 +3,8 @@ table f_midas_sales
 	lineageTag: c2597620-aa63-4ccd-99d0-834cd6d6aed6
 
 	column MIDAS_SALES_ID
-		isHidden
 		dataType: string
+		isHidden
 		isNullable: false
 		sourceProviderType: nvarchar(max)
 		lineageTag: dcce2d44-4c56-4adc-b712-59ae23e8e57d
@@ -14,8 +14,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column ATC4_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: b9391c1f-6a90-4061-aac0-45785dfff22e
@@ -25,8 +25,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column CHANNEL_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: fa1591e5-6f59-4525-8672-8ef2968bfd35
@@ -36,8 +36,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INTERNATIONAL_PRESCRIPTION_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: c61f87b2-3638-4e78-b492-efd790c2438e
@@ -47,8 +47,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column DISEASE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 89776759-8c45-491a-9fa9-1f1fc3a46b9f
@@ -58,8 +58,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column NFC123_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 44c96256-da52-4db1-926c-c6cea4635ea4
@@ -69,8 +69,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column MANUFACTURER_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 80e02e1a-d058-496e-bb81-050b9b4f547c
@@ -80,8 +80,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column MOLECULE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 70f556be-a03a-4e95-8cb8-057d882da852
@@ -91,8 +91,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column LICENSING_STATUS_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 741c30d5-2d0f-48f3-bd8e-580f7bb4b62f
@@ -102,8 +102,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column DIAG4_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: daf5a7ef-7c97-4cfe-a7ca-a28a7796574e
@@ -113,8 +113,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column SPECIALTY_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 145ccd56-5860-44eb-8019-105c9b7b9ab5
@@ -124,8 +124,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column MOLECULE_PATENT_EXPIRY_DATE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 0dc517f9-d9a2-40dd-a610-a502b258441c
@@ -135,8 +135,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column GENERIC_PRODUCT_CLASSIFICATION_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: d496ad00-1259-40a1-837b-ccf4753e19cd
@@ -146,8 +146,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column BIOCOMPARABLE_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: eb20a475-1f75-4ff0-a7b5-063f52d9e95b
@@ -157,8 +157,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column NON_BIOCOMPARABLE_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 44dc2e6e-1f4f-4f33-a00c-2684517245ee
@@ -168,8 +168,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column BIOSIMILAR_REFERENCE_GROUP_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 7f175989-dffb-4a68-8216-138cd6eccd24
@@ -179,8 +179,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column DISEASE_RATIO_SOURCE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 9951fe0d-457e-4544-9e75-67c63e874c78
@@ -190,8 +190,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column REGIMEN_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: deca7a1d-7d2c-40b2-b3b8-f0b32e363469
@@ -201,8 +201,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column PROTECTION_CURRENT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 6913e741-5f26-472a-94be-716f62eb103e
@@ -212,8 +212,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INTERNATIONAL_BRAND_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: baa26ed5-b358-422d-821a-2114c995f88a
@@ -223,8 +223,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 957cf65e-1c2a-4a36-aebb-83da524679c2
@@ -234,8 +234,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column CORPORATION_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 2b792836-1d69-4c22-b261-1abe7e74c7b8
@@ -245,8 +245,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column COUNTRY_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 32fa02f0-8815-49df-948b-5f780275d0c3
@@ -256,8 +256,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INTERNATIONAL_PACK_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 7bb7b769-d3c7-4e37-998e-be4b7d47085c
@@ -267,8 +267,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INTERNATIONAL_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: e563e1f5-917e-46f4-8fc1-8ade154d7ba7
@@ -278,8 +278,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column BIOLOGIC_MOLECULE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: e40ccd4f-2f08-4ff1-830a-6aa0917deb55
@@ -289,8 +289,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column BIOLOGIC_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: d783700d-d28a-4508-b403-862eebd9b29c
@@ -300,8 +300,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column INNOVATION_INSIGHTS_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: f9143bdc-c60a-4d6b-bf36-bb1acad5b0cc
@@ -311,8 +311,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column NAME_TYPE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 83154e0d-c1e3-4f86-b37a-bcdeddf575bf
@@ -322,8 +322,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column ALL_BIOCOMP_NON_BIOCOMP_PRODUCTS_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 2cc5ee74-5463-4411-a799-f27a43c26a83
@@ -333,8 +333,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column PROTECTION_HISTORICAL_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 5255355c-e919-424d-8c60-c61eef56082f
@@ -344,8 +344,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column PRE_POST_PROTECTION_EXPIRY_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 9d310150-f7eb-402b-bd3c-7118e5d9226f
@@ -355,8 +355,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column ESTIMATED_PROTECTION_EXPIRY_DATE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 6ecc182c-f352-49b5-b275-37923473eddc
@@ -366,8 +366,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column LAUNCH_STATUS_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 14805f9f-eca4-4555-8caa-a97f7e1eab37
@@ -377,8 +377,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column MARKET_ID
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: bigint
 		lineageTag: 4f3d386c-256f-400d-a572-ef0a8cee4e1b
@@ -388,8 +388,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column QUARTER_ID
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		sourceProviderType: date
 		lineageTag: b58594d0-a867-4369-8f7a-8fda79192d92
@@ -501,8 +501,8 @@ table f_midas_sales
 		annotation UnderlyingDateTimeDataType = Date
 
 	column CATEGORY_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -513,8 +513,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column CATEGORY_L2_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -525,8 +525,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column CATEGORY_L3_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -537,8 +537,8 @@ table f_midas_sales
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: cb934143-6e52-4fac-9d3b-d01bf569c8e4

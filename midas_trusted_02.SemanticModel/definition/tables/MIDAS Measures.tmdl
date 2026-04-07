@@ -54,3 +54,4 @@ table 'MIDAS Measures'
 	partition 'MIDAS Measures' = calculated
 		mode: import
 		source = Row("Column", BLANK())
+

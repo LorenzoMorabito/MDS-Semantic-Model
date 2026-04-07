@@ -3,8 +3,8 @@ table d_generic_product_classification
 	lineageTag: c96e13c4-7a96-4017-8c6a-1c4092ed1ead
 
 	column GENERIC_PRODUCT_CLASSIFICATION_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_generic_product_classification
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: d1f14fa3-0499-4204-b5bc-fdab4f0f0e5e

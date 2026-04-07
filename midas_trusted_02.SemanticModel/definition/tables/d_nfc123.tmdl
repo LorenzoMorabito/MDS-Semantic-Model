@@ -2,8 +2,8 @@ table d_nfc123
 	lineageTag: 58cef4e6-666a-4adf-815d-1cb9ffc72e07
 
 	column NFC123_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -23,8 +23,8 @@ table d_nfc123
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 27025343-edce-4310-9ee4-c3711788bf43

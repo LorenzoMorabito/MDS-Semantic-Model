@@ -1,33 +1,33 @@
 id,parent_id,milestone,priority,status,item_type,title,depends_on,comment
-MIDAS-001,EPIC-001,M0,P0,open,data_issue,"Deduplicate f_midas_sales on MIDAS_SALES_ID",upstream_databricks_fix,"Critical upstream blocker; duplicate PK surplus currently 32,223"
-MIDAS-002,EPIC-001,M0,P0,open,data_issue,"Repair d_time coverage for QUARTER_ID",upstream_databricks_fix,"Critical upstream blocker; orphan quarter rows currently 26,245,612"
-MIDAS-003,EPIC-001,M0,P1,open,data_decision,"Clarify business semantics of local currency nulls",business_and_data_eng,"Do not publish business-facing local currency measures before a rule is agreed"
-MIDAS-004,EPIC-001,M0,P0,open,platform_decision,"Lock final warehouse and connection strategy",team_decision,"Current pbip points to a different warehouse than the latest assessment"
-MIDAS-005,EPIC-001,M0,P0,open,platform_decision,"Lock storage mode strategy",team_decision,"Current model is DirectQuery; this must be an explicit choice"
-MIDAS-006,EPIC-001,M1,P0,open,model_design,"Add governed logical time relationship strategy",MIDAS-002,"Current model has no time relationship; this affects all time intelligence"
-MIDAS-007,EPIC-001,M1,P0,open,model_design,"Define visible business dimensions for MIDAS",none,"Need a curated business layer instead of exposing all imported tables equally"
-MIDAS-008,EPIC-001,M1,P0,open,model_task,"Apply hide/show policy to surrogate keys and technical columns",MIDAS-007,"First step to make the model usable by the team"
-MIDAS-009,EPIC-001,M1,P1,open,model_task,"Create measure folders and naming standard in the model",MIDAS-007,"Must separate core, thin and helper measures"
-MIDAS-010,EPIC-001,M1,P1,open,model_task,"Curate dimensions for business readability",MIDAS-007,"Focus on channel, country, market, product, molecule, corporation and time"
-MIDAS-011,EPIC-001,M2,P0,open,measure_family,"Implement Units family",MIDAS-006,"Core release measure family"
-MIDAS-012,EPIC-001,M2,P0,open,measure_family,"Implement Values family",MIDAS-006,"Core release measure family; currency scope must be explicit"
-MIDAS-013,EPIC-001,M2,P0,open,measure_family,"Implement Market Share % family",MIDAS-011|MIDAS-012,"Core release family; scope logic must be documented"
-MIDAS-014,EPIC-001,M2,P1,open,measure_family,"Implement Evolution Index family",MIDAS-013,"Release 1 target once share logic is stable"
-MIDAS-015,EPIC-001,M2,P1,open,measure_family,"Implement Delta % vs PY family",MIDAS-012|MIDAS-006,"Core comparator family for Release 1"
-MIDAS-016,EPIC-001,M2,P1,open,ux_task,"Create thin business-facing measures for core MIDAS battery",MIDAS-011|MIDAS-012|MIDAS-013|MIDAS-014|MIDAS-015,"Expose familiar OAS labels without duplicating business logic"
-MIDAS-017,EPIC-001,M3,P1,open,measure_family,"Implement Values 3MM",MIDAS-012,"Important parity gap from legacy inventory"
-MIDAS-018,EPIC-001,M3,P1,open,measure_family,"Implement Delta % vs PP",MIDAS-012|MIDAS-006,"Requires explicit previous-period design"
-MIDAS-019,EPIC-001,M3,P2,open,measure_family,"Implement Rank family",MIDAS-011|MIDAS-012,"Ranking logic should be governed, not improvised in reports"
-MIDAS-020,EPIC-001,M3,P2,open,measure_family,"Implement Average Price family",MIDAS-011|MIDAS-012,"Need explicit denominator and market-scope rules"
-MIDAS-021,EPIC-001,M3,P2,open,measure_family,"Implement PPG family",MIDAS-020,"Not core release critical but important for extended parity"
-MIDAS-022,EPIC-001,M3,P2,open,scope_decision,"Decide business packaging for Brand/Generics split",business_decision,"Needs explicit include/defer decision"
-MIDAS-023,EPIC-001,M3,P2,open,scope_decision,"Decide business packaging for Region/Channel split",business_decision,"Needs explicit include/defer decision"
-MIDAS-024,EPIC-001,M4,P3,open,measure_family,"Implement Price Effect family",MIDAS-015,"Advanced parity candidate"
-MIDAS-025,EPIC-001,M4,P3,open,measure_family,"Implement Volume Effect family",MIDAS-015,"Advanced parity candidate"
-MIDAS-026,EPIC-001,M4,P3,open,measure_family,"Implement Mix Effect family",MIDAS-015,"Advanced parity candidate"
-MIDAS-027,EPIC-001,M4,P3,open,measure_family,"Implement Segment Share / Penetration family",MIDAS-013,"Advanced parity candidate with segmentation logic"
-MIDAS-028,EPIC-001,M4,P0,open,validation_task,"Define MIDAS parity sample test set",MIDAS-011|MIDAS-012|MIDAS-013,"Need a stable sample set before claiming parity"
-MIDAS-029,EPIC-001,M4,P0,open,validation_task,"Run Release 1 sanity and parity checks",MIDAS-016|MIDAS-028,"Blocking before team use"
-MIDAS-030,EPIC-001,M4,P0,open,documentation_task,"Create MIDAS domain README and measure catalog",MIDAS-016,"Required for handover and reuse"
-MIDAS-031,EPIC-001,M4,P1,open,documentation_task,"Document known data issues and usage caveats",MIDAS-001|MIDAS-002|MIDAS-003,"Must include time and currency caveats"
-MIDAS-032,EPIC-001,M4,P1,open,documentation_task,"Define change workflow for MIDAS semantic model",MIDAS-030,"Needed for multi-team maintenance"
+MIDAS-001,EPIC-001,M0,P0,open,data_issue,Deduplicate f_midas_sales on MIDAS_SALES_ID,upstream_databricks_fix,"Critical upstream blocker; duplicate PK surplus currently 32,223"
+MIDAS-002,EPIC-001,M0,P0,open,data_issue,Repair d_time coverage for QUARTER_ID,upstream_databricks_fix,"Critical upstream blocker; orphan quarter rows currently 26,245,612"
+MIDAS-003,EPIC-001,M0,P1,open,data_decision,Clarify business semantics of local currency nulls,business_and_data_eng,Do not publish business-facing local currency measures before a rule is agreed
+MIDAS-004,EPIC-001,M0,P0,open,platform_decision,Lock final warehouse and connection strategy,team_decision,Current pbip points to a different warehouse than the latest assessment
+MIDAS-005,EPIC-001,M0,P0,open,platform_decision,Lock storage mode strategy,team_decision,Current model is DirectQuery; this must be an explicit choice
+MIDAS-006,EPIC-001,M1,P0,in_progress,model_design,Add governed logical time relationship strategy,MIDAS-002,"Logical quarter relationship implemented in Sprint 1, but upstream d_time coverage defect still blocks final closure"
+MIDAS-007,EPIC-001,M1,P0,in_progress,model_design,Define visible business dimensions for MIDAS,none,Initial visible-layer curation started in Sprint 1; final business-visible whitelist still to be approved
+MIDAS-008,EPIC-001,M1,P0,in_progress,model_task,Apply hide/show policy to surrogate keys and technical columns,MIDAS-007,"IDs, technical timestamps and fact hidden in Sprint 1; further browser cleanup remains"
+MIDAS-009,EPIC-001,M1,P1,in_progress,model_task,Create measure folders and naming standard in the model,MIDAS-007,Initial measure table created in Sprint 1; final naming and folder standard still to complete
+MIDAS-010,EPIC-001,M1,P1,open,model_task,Curate dimensions for business readability,MIDAS-007,"Focus on channel, country, market, product, molecule, corporation and time"
+MIDAS-011,EPIC-001,M2,P0,done,measure_family,Implement Units family,MIDAS-006,Base Units measures implemented and desktop-validated in Sprint 1
+MIDAS-012,EPIC-001,M2,P0,in_progress,measure_family,Implement Values family,MIDAS-006,"Base additive value measures implemented, but currency publishing scope remains unresolved"
+MIDAS-013,EPIC-001,M2,P0,open,measure_family,Implement Market Share % family,MIDAS-011|MIDAS-012,Core release family; scope logic must be documented
+MIDAS-014,EPIC-001,M2,P1,open,measure_family,Implement Evolution Index family,MIDAS-013,Release 1 target once share logic is stable
+MIDAS-015,EPIC-001,M2,P1,open,measure_family,Implement Delta % vs PY family,MIDAS-012|MIDAS-006,Core comparator family for Release 1
+MIDAS-016,EPIC-001,M2,P1,open,ux_task,Create thin business-facing measures for core MIDAS battery,MIDAS-011|MIDAS-012|MIDAS-013|MIDAS-014|MIDAS-015,Expose familiar OAS labels without duplicating business logic
+MIDAS-017,EPIC-001,M3,P1,open,measure_family,Implement Values 3MM,MIDAS-012,Important parity gap from legacy inventory
+MIDAS-018,EPIC-001,M3,P1,open,measure_family,Implement Delta % vs PP,MIDAS-012|MIDAS-006,Requires explicit previous-period design
+MIDAS-019,EPIC-001,M3,P2,open,measure_family,Implement Rank family,MIDAS-011|MIDAS-012,"Ranking logic should be governed, not improvised in reports"
+MIDAS-020,EPIC-001,M3,P2,open,measure_family,Implement Average Price family,MIDAS-011|MIDAS-012,Need explicit denominator and market-scope rules
+MIDAS-021,EPIC-001,M3,P2,open,measure_family,Implement PPG family,MIDAS-020,Not core release critical but important for extended parity
+MIDAS-022,EPIC-001,M3,P2,open,scope_decision,Decide business packaging for Brand/Generics split,business_decision,Needs explicit include/defer decision
+MIDAS-023,EPIC-001,M3,P2,open,scope_decision,Decide business packaging for Region/Channel split,business_decision,Needs explicit include/defer decision
+MIDAS-024,EPIC-001,M4,P3,open,measure_family,Implement Price Effect family,MIDAS-015,Advanced parity candidate
+MIDAS-025,EPIC-001,M4,P3,open,measure_family,Implement Volume Effect family,MIDAS-015,Advanced parity candidate
+MIDAS-026,EPIC-001,M4,P3,open,measure_family,Implement Mix Effect family,MIDAS-015,Advanced parity candidate
+MIDAS-027,EPIC-001,M4,P3,open,measure_family,Implement Segment Share / Penetration family,MIDAS-013,Advanced parity candidate with segmentation logic
+MIDAS-028,EPIC-001,M4,P0,open,validation_task,Define MIDAS parity sample test set,MIDAS-011|MIDAS-012|MIDAS-013,Need a stable sample set before claiming parity
+MIDAS-029,EPIC-001,M4,P0,open,validation_task,Run Release 1 sanity and parity checks,MIDAS-016|MIDAS-028,Blocking before team use
+MIDAS-030,EPIC-001,M4,P0,open,documentation_task,Create MIDAS domain README and measure catalog,MIDAS-016,Required for handover and reuse
+MIDAS-031,EPIC-001,M4,P1,open,documentation_task,Document known data issues and usage caveats,MIDAS-001|MIDAS-002|MIDAS-003,Must include time and currency caveats
+MIDAS-032,EPIC-001,M4,P1,open,documentation_task,Define change workflow for MIDAS semantic model,MIDAS-030,Needed for multi-team maintenance

@@ -3,8 +3,8 @@ table d_estimated_protection_expiry_date
 	lineageTag: 57a6bec8-7fdf-4357-9003-3db7734dcbd3
 
 	column ESTIMATED_PROTECTION_EXPIRY_DATE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_estimated_protection_expiry_date
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 570ff396-aed8-4255-820d-366d2439b317

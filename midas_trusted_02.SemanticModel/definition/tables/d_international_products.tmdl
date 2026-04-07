@@ -2,8 +2,8 @@ table d_international_products
 	lineageTag: ffb08322-a319-481a-ab06-7f7368094c0a
 
 	column INTERNATIONAL_PRODUCT_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -23,8 +23,8 @@ table d_international_products
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 8414edc8-0f76-4ece-976f-246c1e2e2800

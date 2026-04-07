@@ -2,8 +2,8 @@ table d_molecules
 	lineageTag: 5f0ea395-31a7-4796-a875-e61f24c362e6
 
 	column MOLECULE_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -32,8 +32,8 @@ table d_molecules
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: e2d1a667-e2df-40c9-a48f-15f1d10780a3

@@ -3,8 +3,8 @@ table d_pre_post_protection_expiry
 	lineageTag: 6f064e39-8ea6-40a2-8216-ef5504659c05
 
 	column PRE_POST_PROTECTION_EXPIRY_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -24,8 +24,8 @@ table d_pre_post_protection_expiry
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: 136daf1d-c71a-4516-96d9-4d1ba71acd16

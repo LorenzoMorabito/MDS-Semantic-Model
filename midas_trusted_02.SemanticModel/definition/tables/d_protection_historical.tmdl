@@ -2,8 +2,8 @@ table d_protection_historical
 	lineageTag: daf5fcae-b54a-42cf-b29a-1450a4a8e2bd
 
 	column PROTECTION_HISTORICAL_ID
-		isHidden
 		dataType: int64
+		isHidden
 		isNullable: false
 		formatString: 0
 		sourceProviderType: bigint
@@ -23,8 +23,8 @@ table d_protection_historical
 		annotation SummarizationSetBy = Automatic
 
 	column _trusted_ts
-		isHidden
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		sourceProviderType: datetime2
 		lineageTag: d9d52347-1b6a-4d70-8d69-6ea7bcef9679
