@@ -1,4 +1,4 @@
-table d_licensing_status
+table 'Licensing Status'
 	lineageTag: 76b41cd8-50f7-4293-bbb8-352d5d18e5c3
 
 	column LICENSING_STATUS_ID
@@ -32,7 +32,6 @@ table d_licensing_status
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_licensing_status = m
 		mode: dual
 		source =

@@ -1,4 +1,4 @@
-table d_specialty_products
+table 'Specialty Products'
 	lineageTag: 79401204-4d06-49a7-84bc-b78ed6f77947
 
 	column SPECIALTY_PRODUCT_ID
@@ -32,7 +32,6 @@ table d_specialty_products
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_specialty_products = m
 		mode: dual
 		source =

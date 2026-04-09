@@ -1,4 +1,4 @@
-table d_pre_post_protection_expiry
+table 'Pre/Post Protection Expiry'
 	isHidden
 	lineageTag: 6f064e39-8ea6-40a2-8216-ef5504659c05
 
@@ -33,7 +33,6 @@ table d_pre_post_protection_expiry
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_pre_post_protection_expiry = m
 		mode: dual
 		source =

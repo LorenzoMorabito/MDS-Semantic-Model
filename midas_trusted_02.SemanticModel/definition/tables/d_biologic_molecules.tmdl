@@ -1,4 +1,4 @@
-table d_biologic_molecules
+table 'Biologic Molecules'
 	isHidden
 	lineageTag: d9df4858-c386-4a3b-9b65-b201c749c662
 
@@ -33,7 +33,6 @@ table d_biologic_molecules
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_biologic_molecules = m
 		mode: dual
 		source =

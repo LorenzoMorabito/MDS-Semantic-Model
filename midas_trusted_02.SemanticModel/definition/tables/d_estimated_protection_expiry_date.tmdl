@@ -1,4 +1,4 @@
-table d_estimated_protection_expiry_date
+table 'Estimated Protection Expiry Date'
 	isHidden
 	lineageTag: 57a6bec8-7fdf-4357-9003-3db7734dcbd3
 
@@ -33,7 +33,6 @@ table d_estimated_protection_expiry_date
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_estimated_protection_expiry_date = m
 		mode: dual
 		source =

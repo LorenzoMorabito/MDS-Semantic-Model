@@ -1,4 +1,4 @@
-table d_manufacturers
+table Manufacturers
 	lineageTag: 566a4051-b784-437e-8496-8dea8cee60cd
 
 	column MANUFACTURER_ID
@@ -51,7 +51,6 @@ table d_manufacturers
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_manufacturers = m
 		mode: dual
 		source =

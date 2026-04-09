@@ -1,4 +1,4 @@
-table d_biosimilar_reference_groups
+table 'Biosimilar Reference Groups'
 	isHidden
 	lineageTag: ad77ff73-5457-4383-9949-93c613c9c521
 
@@ -33,7 +33,6 @@ table d_biosimilar_reference_groups
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_biosimilar_reference_groups = m
 		mode: dual
 		source =

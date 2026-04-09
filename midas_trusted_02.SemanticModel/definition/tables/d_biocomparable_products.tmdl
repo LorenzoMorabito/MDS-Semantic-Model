@@ -1,4 +1,4 @@
-table d_biocomparable_products
+table 'Biocomparable Products'
 	isHidden
 	lineageTag: c54e7dc9-13c9-4a2f-9f36-31db3af6f4e0
 
@@ -33,7 +33,6 @@ table d_biocomparable_products
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_biocomparable_products = m
 		mode: dual
 		source =

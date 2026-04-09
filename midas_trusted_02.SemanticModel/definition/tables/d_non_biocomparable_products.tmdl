@@ -1,4 +1,4 @@
-table d_non_biocomparable_products
+table 'Non Biocomparable Products'
 	isHidden
 	lineageTag: e30b8822-cc92-4e05-ac6b-3f251244d17c
 
@@ -33,7 +33,6 @@ table d_non_biocomparable_products
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_non_biocomparable_products = m
 		mode: dual
 		source =

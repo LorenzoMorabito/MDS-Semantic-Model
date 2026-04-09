@@ -1,4 +1,4 @@
-table d_launch_status
+table 'Launch Status'
 	isHidden
 	lineageTag: 575d7cb7-85fd-4538-b354-ce96ae55810a
 
@@ -33,7 +33,6 @@ table d_launch_status
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_launch_status = m
 		mode: dual
 		source =

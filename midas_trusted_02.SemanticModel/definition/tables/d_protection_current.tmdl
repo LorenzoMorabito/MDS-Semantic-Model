@@ -1,4 +1,4 @@
-table d_protection_current
+table 'Current Protection'
 	lineageTag: 85acfa4a-1f46-48c0-a14a-6e2717f83f74
 
 	column PROTECTION_CURRENT_ID
@@ -32,7 +32,6 @@ table d_protection_current
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_protection_current = m
 		mode: dual
 		source =

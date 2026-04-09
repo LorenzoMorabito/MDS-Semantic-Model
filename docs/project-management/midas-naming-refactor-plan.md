@@ -42,27 +42,27 @@ This refactor affects:
 | `d_products` | `Products` | Visible | High | Straight rename |
 | `d_reconstructed_markets` | `Markets` | Visible | High | More business-friendly than technical source name |
 | `d_time` | `Time` | Visible | High | Core model object |
-| `d_licensing_status` | `Licensing Status` | Visible | Medium | Straight rename |
-| `d_name_type` | `Name Type` | Visible | Medium | Straight rename |
-| `d_launch_status` | `Launch Status` | Visible | Medium | Straight rename |
-| `d_manufacturers` | `Manufacturers` | Visible | Medium | Straight rename |
-| `d_generic_product_classification` | `Generic Product Classification` | Visible | Medium | Long but clear |
-| `d_protection_current` | `Current Protection` | Visible | Medium | More readable than source order |
-| `d_protection_historical` | `Historical Protection` | Visible | Medium | More readable than source order |
-| `d_pre_post_protection_expiry` | `Pre/Post Protection Expiry` | Visible | Medium | Keep slash for readability if supported |
-| `d_estimated_protection_expiry_date` | `Estimated Protection Expiry Date` | Visible | Medium | Long but explicit |
-| `d_biologic_molecules` | `Biologic Molecules` | Visible | Medium | Straight rename |
-| `d_biologic_products` | `Biologic Products` | Visible | Medium | Straight rename |
-| `d_biocomparable_products` | `Biocomparable Products` | Visible | Medium | Straight rename |
-| `d_non_biocomparable_products` | `Non Biocomparable Products` | Visible | Medium | Straight rename |
+| `'Licensing Status'` | `Licensing Status` | Visible | Medium | Straight rename |
+| `'Name Type'` | `Name Type` | Visible | Medium | Straight rename |
+| `'Launch Status'` | `Launch Status` | Visible | Medium | Straight rename |
+| `Manufacturers` | `Manufacturers` | Visible | Medium | Straight rename |
+| `'Generic Product Classification'` | `Generic Product Classification` | Visible | Medium | Long but clear |
+| `'Current Protection'` | `Current Protection` | Visible | Medium | More readable than source order |
+| `'Historical Protection'` | `Historical Protection` | Visible | Medium | More readable than source order |
+| `'Pre/Post Protection Expiry'` | `Pre/Post Protection Expiry` | Visible | Medium | Keep slash for readability if supported |
+| `'Estimated Protection Expiry Date'` | `Estimated Protection Expiry Date` | Visible | Medium | Long but explicit |
+| `'Biologic Molecules'` | `Biologic Molecules` | Visible | Medium | Straight rename |
+| `'Biologic Products'` | `Biologic Products` | Visible | Medium | Straight rename |
+| `'Biocomparable Products'` | `Biocomparable Products` | Visible | Medium | Straight rename |
+| `'Non Biocomparable Products'` | `Non Biocomparable Products` | Visible | Medium | Straight rename |
 | `d_all_biocomp_non_biocomp_products` | `All Biocomp/Non Biocomp Products` | Visible | Low | Needs final wording confirmation |
-| `d_biosimilar_reference_groups` | `Biosimilar Reference Groups` | Visible | Medium | Straight rename |
+| `'Biosimilar Reference Groups'` | `Biosimilar Reference Groups` | Visible | Medium | Straight rename |
 | `d_diags` | `DIAG` | Visible | Low | Needs business confirmation on acronym expansion |
 | `d_disease_ratio_source` | `Disease Ratio Source` | Visible | Low | Niche business object |
-| `d_diseases` | `Diseases` | Visible | Medium | Straight rename |
+| `Diseases` | `Diseases` | Visible | Medium | Straight rename |
 | `d_molecule_patent_expiry_date` | `Molecule Patent Expiry Date` | Visible | Low | Long technical/business hybrid |
 | `d_regimen` | `Regimen` | Visible | Low | Straight rename |
-| `d_specialty_products` | `Specialty Products` | Visible | Medium | Straight rename |
+| `'Specialty Products'` | `Specialty Products` | Visible | Medium | Straight rename |
 | `f_midas_sales` | `MIDAS Sales` | Hidden | Medium | Hidden fact can also stay technical if preferred |
 | `MIDAS Measures` | `MIDAS Measures` | Visible | Keep | Already business-friendly |
 
@@ -75,9 +75,9 @@ The following explicit table references exist today in measures and must be upda
 - `d_international_products`
 - `d_international_packs`
 - `d_molecules`
-- `d_generic_product_classification`
+- `'Generic Product Classification'`
 - `d_corporations`
-- `d_protection_current`
+- `'Current Protection'`
 - `d_international_prescriptions`
 - `f_midas_sales`
 

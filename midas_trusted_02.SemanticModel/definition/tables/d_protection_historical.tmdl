@@ -1,4 +1,4 @@
-table d_protection_historical
+table 'Historical Protection'
 	lineageTag: daf5fcae-b54a-42cf-b29a-1450a4a8e2bd
 
 	column PROTECTION_HISTORICAL_ID
@@ -32,7 +32,6 @@ table d_protection_historical
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_protection_historical = m
 		mode: dual
 		source =

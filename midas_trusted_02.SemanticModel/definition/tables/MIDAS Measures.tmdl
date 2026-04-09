@@ -369,9 +369,9 @@ table 'MIDAS Measures'
 			    REMOVEFILTERS ( 'International Products' ),
 			    REMOVEFILTERS ( 'International Packs' ),
 			    REMOVEFILTERS ( Molecules ),
-			    REMOVEFILTERS ( d_generic_product_classification ),
+			    REMOVEFILTERS ( 'Generic Product Classification' ),
 			    REMOVEFILTERS ( Corporations ),
-			    REMOVEFILTERS ( d_protection_current ),
+			    REMOVEFILTERS ( 'Current Protection' ),
 			    REMOVEFILTERS ( Prescriptions )
 			)
 		formatString: #,0;-#,0;0
@@ -386,9 +386,9 @@ table 'MIDAS Measures'
 			    REMOVEFILTERS ( 'International Products' ),
 			    REMOVEFILTERS ( 'International Packs' ),
 			    REMOVEFILTERS ( Molecules ),
-			    REMOVEFILTERS ( d_generic_product_classification ),
+			    REMOVEFILTERS ( 'Generic Product Classification' ),
 			    REMOVEFILTERS ( Corporations ),
-			    REMOVEFILTERS ( d_protection_current ),
+			    REMOVEFILTERS ( 'Current Protection' ),
 			    REMOVEFILTERS ( Prescriptions )
 			)
 		formatString: #,0.0;-#,0.0;0.0
@@ -403,9 +403,9 @@ table 'MIDAS Measures'
 			    REMOVEFILTERS ( 'International Products' ),
 			    REMOVEFILTERS ( 'International Packs' ),
 			    REMOVEFILTERS ( Molecules ),
-			    REMOVEFILTERS ( d_generic_product_classification ),
+			    REMOVEFILTERS ( 'Generic Product Classification' ),
 			    REMOVEFILTERS ( Corporations ),
-			    REMOVEFILTERS ( d_protection_current ),
+			    REMOVEFILTERS ( 'Current Protection' ),
 			    REMOVEFILTERS ( Prescriptions )
 			)
 		formatString: #,0.0;-#,0.0;0.0
@@ -420,9 +420,9 @@ table 'MIDAS Measures'
 			    REMOVEFILTERS ( 'International Products' ),
 			    REMOVEFILTERS ( 'International Packs' ),
 			    REMOVEFILTERS ( Molecules ),
-			    REMOVEFILTERS ( d_generic_product_classification ),
+			    REMOVEFILTERS ( 'Generic Product Classification' ),
 			    REMOVEFILTERS ( Corporations ),
-			    REMOVEFILTERS ( d_protection_current ),
+			    REMOVEFILTERS ( 'Current Protection' ),
 			    REMOVEFILTERS ( Prescriptions )
 			)
 		formatString: #,0.0;-#,0.0;0.0

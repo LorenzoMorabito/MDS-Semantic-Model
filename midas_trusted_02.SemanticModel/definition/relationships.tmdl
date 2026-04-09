@@ -18,7 +18,7 @@ relationship c361547a-c9ed-4a8e-bb86-2a030cdcbfc6
 
 relationship 9f5eb093-b878-496a-8c0c-49ae782a273a
 	fromColumn: f_midas_sales.DISEASE_ID
-	toColumn: d_diseases.DISEASE_ID
+	toColumn: Diseases.DISEASE_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -30,7 +30,7 @@ relationship e18c6151-8037-4d7d-b8df-166990bfec08
 
 relationship d277478f-4191-4453-8ff7-2e2b9f76a4a5
 	fromColumn: f_midas_sales.MANUFACTURER_ID
-	toColumn: d_manufacturers.MANUFACTURER_ID
+	toColumn: Manufacturers.MANUFACTURER_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -42,7 +42,7 @@ relationship c52863a9-b856-48bb-b383-d45229e6f77c
 
 relationship 1a90a0d0-a1ac-41f5-a5ea-0ccfd769076b
 	fromColumn: f_midas_sales.LICENSING_STATUS_ID
-	toColumn: d_licensing_status.LICENSING_STATUS_ID
+	toColumn: 'Licensing Status'.LICENSING_STATUS_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -54,7 +54,7 @@ relationship 5c68d039-3a5b-4649-84e3-68c59db6ccd9
 
 relationship db620d96-fd6d-4dcf-882d-dc0e2ddb8f79
 	fromColumn: f_midas_sales.SPECIALTY_PRODUCT_ID
-	toColumn: d_specialty_products.SPECIALTY_PRODUCT_ID
+	toColumn: 'Specialty Products'.SPECIALTY_PRODUCT_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -66,25 +66,25 @@ relationship 55c6e42a-88a3-4cde-9dca-c87dd5e66121
 
 relationship 6d1056a0-b081-4dd0-81ab-4474d739fe23
 	fromColumn: f_midas_sales.GENERIC_PRODUCT_CLASSIFICATION_ID
-	toColumn: d_generic_product_classification.GENERIC_PRODUCT_CLASSIFICATION_ID
+	toColumn: 'Generic Product Classification'.GENERIC_PRODUCT_CLASSIFICATION_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship 751af68e-d067-4b9c-9b3e-0aff73cd086a
 	fromColumn: f_midas_sales.BIOCOMPARABLE_PRODUCT_ID
-	toColumn: d_biocomparable_products.BIOCOMPARABLE_PRODUCT_ID
+	toColumn: 'Biocomparable Products'.BIOCOMPARABLE_PRODUCT_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship ca66756b-bcb6-414d-9e51-0f1dc328d6c1
 	fromColumn: f_midas_sales.NON_BIOCOMPARABLE_PRODUCT_ID
-	toColumn: d_non_biocomparable_products.NON_BIOCOMPARABLE_PRODUCT_ID
+	toColumn: 'Non Biocomparable Products'.NON_BIOCOMPARABLE_PRODUCT_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship e5364ba2-b4d4-4213-89fb-ed0c7148b90f
 	fromColumn: f_midas_sales.BIOSIMILAR_REFERENCE_GROUP_ID
-	toColumn: d_biosimilar_reference_groups.BIOSIMILAR_REFERENCE_GROUP_ID
+	toColumn: 'Biosimilar Reference Groups'.BIOSIMILAR_REFERENCE_GROUP_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -102,7 +102,7 @@ relationship f24df3e7-affe-4e47-b264-f787dc7acbc0
 
 relationship 11c382f7-8450-46a0-8b5c-e1f9d4169aa8
 	fromColumn: f_midas_sales.PROTECTION_CURRENT_ID
-	toColumn: d_protection_current.PROTECTION_CURRENT_ID
+	toColumn: 'Current Protection'.PROTECTION_CURRENT_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -144,13 +144,13 @@ relationship 7312787b-987d-4898-bf0f-7fc10842cb8c
 
 relationship b5f1e47e-6ebb-4855-a9bf-b3786190db15
 	fromColumn: f_midas_sales.BIOLOGIC_MOLECULE_ID
-	toColumn: d_biologic_molecules.BIOLOGIC_MOLECULE_ID
+	toColumn: 'Biologic Molecules'.BIOLOGIC_MOLECULE_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship 68544f8b-5c5a-47f8-8d36-83f08b462f90
 	fromColumn: f_midas_sales.BIOLOGIC_PRODUCT_ID
-	toColumn: d_biologic_products.BIOLOGIC_PRODUCT_ID
+	toColumn: 'Biologic Products'.BIOLOGIC_PRODUCT_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -162,7 +162,7 @@ relationship 6ffa2490-3fd6-487e-bbbf-d641f7a4fe29
 
 relationship 5961ce58-01de-493f-b20d-0201bd878858
 	fromColumn: f_midas_sales.NAME_TYPE_ID
-	toColumn: d_name_type.NAME_TYPE_ID
+	toColumn: 'Name Type'.NAME_TYPE_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -174,25 +174,25 @@ relationship c73f6386-e1f9-4ca6-b87d-ebae62b944d4
 
 relationship 97619e17-9370-45c9-8f22-2ff1e735d11f
 	fromColumn: f_midas_sales.PROTECTION_HISTORICAL_ID
-	toColumn: d_protection_historical.PROTECTION_HISTORICAL_ID
+	toColumn: 'Historical Protection'.PROTECTION_HISTORICAL_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship cda1fb1a-5c73-423f-8249-0ecaa9a5d08f
 	fromColumn: f_midas_sales.PRE_POST_PROTECTION_EXPIRY_ID
-	toColumn: d_pre_post_protection_expiry.PRE_POST_PROTECTION_EXPIRY_ID
+	toColumn: 'Pre/Post Protection Expiry'.PRE_POST_PROTECTION_EXPIRY_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship 0afd2267-1f80-4d40-bd79-142670e97dad
 	fromColumn: f_midas_sales.ESTIMATED_PROTECTION_EXPIRY_DATE_ID
-	toColumn: d_estimated_protection_expiry_date.ESTIMATED_PROTECTION_EXPIRY_DATE_ID
+	toColumn: 'Estimated Protection Expiry Date'.ESTIMATED_PROTECTION_EXPIRY_DATE_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship bd4c305d-cee1-44ce-aab8-ec0ff6639a22
 	fromColumn: f_midas_sales.LAUNCH_STATUS_ID
-	toColumn: d_launch_status.LAUNCH_STATUS_ID
+	toColumn: 'Launch Status'.LAUNCH_STATUS_ID
 
 	annotation PBI_IsFromSource = FS
 

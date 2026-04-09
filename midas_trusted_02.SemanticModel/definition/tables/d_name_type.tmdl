@@ -1,4 +1,4 @@
-table d_name_type
+table 'Name Type'
 	lineageTag: f2f8e067-110e-41f7-bb61-1238bd23180e
 
 	column NAME_TYPE_ID
@@ -32,7 +32,6 @@ table d_name_type
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_name_type = m
 		mode: dual
 		source =

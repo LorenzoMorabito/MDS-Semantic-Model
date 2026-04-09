@@ -1,4 +1,4 @@
-table d_biologic_products
+table 'Biologic Products'
 	isHidden
 	lineageTag: 4b517c4e-e399-40e4-8af7-eecfa38ced15
 
@@ -33,7 +33,6 @@ table d_biologic_products
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_biologic_products = m
 		mode: dual
 		source =
