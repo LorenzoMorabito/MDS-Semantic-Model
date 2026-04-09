@@ -1,4 +1,4 @@
-table d_channels
+table Channels
 	lineageTag: e8d748c8-8ad3-48f7-9a0f-231c98fe2d9f
 
 	column CHANNEL_ID
@@ -41,7 +41,6 @@ table d_channels
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_channels = m
 		mode: dual
 		source =
@@ -52,4 +51,5 @@ table d_channels
 				    d_channels_Table = trusted_starschema_02_Schema{[Name="d_channels",Kind="Table"]}[Data]
 				in
 				    d_channels_Table
+
 

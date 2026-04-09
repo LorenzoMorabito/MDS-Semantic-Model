@@ -1,4 +1,4 @@
-table d_atcs
+table 'ATC'
 	lineageTag: a17c3b0d-718e-4f39-ae06-9e2489487458
 
 	column ATC1
@@ -104,7 +104,6 @@ table d_atcs
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_atcs = m
 		mode: dual
 		source =
@@ -115,4 +114,5 @@ table d_atcs
 				    d_atcs_Table = trusted_starschema_02_Schema{[Name="d_atcs",Kind="Table"]}[Data]
 				in
 				    d_atcs_Table
+
 

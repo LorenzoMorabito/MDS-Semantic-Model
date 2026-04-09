@@ -8,50 +8,51 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["d_all_biocomp_non_biocomp_products","d_atcs","d_biocomparable_products","d_biologic_molecules","d_biologic_products","d_biosimilar_reference_groups","d_categories","d_categories_l2","d_categories_l3","d_channels","d_corporations","d_countries","d_diags","d_disease_ratio_source","d_diseases","d_estimated_protection_expiry_date","d_generic_product_classification","d_innovation_insights","d_international_brands","d_international_packs","d_international_prescriptions","d_international_products","d_launch_status","d_licensing_status","d_manufacturers","d_molecule_patent_expiry_date","d_molecules","d_name_type","d_nfc123","d_non_biocomparable_products","d_pre_post_protection_expiry","d_products","d_protection_current","d_protection_historical","d_reconstructed_markets","d_regimen","d_specialty_products","d_time","f_midas_sales"]
+annotation PBI_QueryOrder = ["d_all_biocomp_non_biocomp_products","ATC","d_biocomparable_products","d_biologic_molecules","d_biologic_products","d_biosimilar_reference_groups","Categories","Categories L2","Categories L3","Channels","Corporations","Countries","d_diags","d_disease_ratio_source","d_diseases","d_estimated_protection_expiry_date","d_generic_product_classification","Innovation Insights","International Brands","International Packs","Prescriptions","International Products","d_launch_status","d_licensing_status","d_manufacturers","d_molecule_patent_expiry_date","Molecules","d_name_type","NFC","d_non_biocomparable_products","d_pre_post_protection_expiry","Products","d_protection_current","d_protection_historical","Markets","d_regimen","d_specialty_products","Time","f_midas_sales"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table d_all_biocomp_non_biocomp_products
-ref table d_atcs
+ref table 'ATC'
 ref table d_biocomparable_products
 ref table d_biologic_molecules
 ref table d_biologic_products
 ref table d_biosimilar_reference_groups
-ref table d_categories
-ref table d_categories_l2
-ref table d_categories_l3
-ref table d_channels
-ref table d_corporations
-ref table d_countries
+ref table Categories
+ref table 'Categories L2'
+ref table 'Categories L3'
+ref table Channels
+ref table Corporations
+ref table Countries
 ref table d_diags
 ref table d_disease_ratio_source
 ref table d_diseases
 ref table d_estimated_protection_expiry_date
 ref table d_generic_product_classification
-ref table d_innovation_insights
-ref table d_international_brands
-ref table d_international_packs
-ref table d_international_prescriptions
-ref table d_international_products
+ref table 'Innovation Insights'
+ref table 'International Brands'
+ref table 'International Packs'
+ref table Prescriptions
+ref table 'International Products'
 ref table d_launch_status
 ref table d_licensing_status
 ref table d_manufacturers
 ref table d_molecule_patent_expiry_date
-ref table d_molecules
+ref table Molecules
 ref table d_name_type
-ref table d_nfc123
+ref table NFC
 ref table d_non_biocomparable_products
 ref table d_pre_post_protection_expiry
-ref table d_products
+ref table Products
 ref table d_protection_current
 ref table d_protection_historical
-ref table d_reconstructed_markets
+ref table Markets
 ref table d_regimen
 ref table d_specialty_products
-ref table d_time
+ref table Time
 ref table f_midas_sales
 ref table 'MIDAS Measures'
 
 ref cultureInfo en-US
+
 

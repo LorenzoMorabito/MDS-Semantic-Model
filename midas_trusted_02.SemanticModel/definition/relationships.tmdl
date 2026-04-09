@@ -1,18 +1,18 @@
 relationship 942443c4-01c3-4a33-a58b-4f6c9b767113
 	fromColumn: f_midas_sales.ATC4_ID
-	toColumn: d_atcs.ATC4_ID
+	toColumn: 'ATC'.ATC4_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship ed3989d2-a3f4-4678-a4ea-09d563f63cac
 	fromColumn: f_midas_sales.CHANNEL_ID
-	toColumn: d_channels.CHANNEL_ID
+	toColumn: Channels.CHANNEL_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship c361547a-c9ed-4a8e-bb86-2a030cdcbfc6
 	fromColumn: f_midas_sales.INTERNATIONAL_PRESCRIPTION_ID
-	toColumn: d_international_prescriptions.INTERNATIONAL_PRESCRIPTION_ID
+	toColumn: Prescriptions.INTERNATIONAL_PRESCRIPTION_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -24,7 +24,7 @@ relationship 9f5eb093-b878-496a-8c0c-49ae782a273a
 
 relationship e18c6151-8037-4d7d-b8df-166990bfec08
 	fromColumn: f_midas_sales.NFC123_ID
-	toColumn: d_nfc123.NFC123_ID
+	toColumn: NFC.NFC123_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -36,7 +36,7 @@ relationship d277478f-4191-4453-8ff7-2e2b9f76a4a5
 
 relationship c52863a9-b856-48bb-b383-d45229e6f77c
 	fromColumn: f_midas_sales.MOLECULE_ID
-	toColumn: d_molecules.MOLECULE_ID
+	toColumn: Molecules.MOLECULE_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -108,37 +108,37 @@ relationship 11c382f7-8450-46a0-8b5c-e1f9d4169aa8
 
 relationship f179922f-a5eb-4ebc-89ba-962e4b164863
 	fromColumn: f_midas_sales.INTERNATIONAL_BRAND_ID
-	toColumn: d_international_brands.INTERNATIONAL_BRAND_ID
+	toColumn: 'International Brands'.INTERNATIONAL_BRAND_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship 5c1ee98a-cda6-4cee-a722-eb3aa0e183d0
 	fromColumn: f_midas_sales.PRODUCT_ID
-	toColumn: d_products.PRODUCT_ID
+	toColumn: Products.PRODUCT_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship e6728d0d-16d9-4cef-89cf-086eea94bd60
 	fromColumn: f_midas_sales.CORPORATION_ID
-	toColumn: d_corporations.CORPORATION_ID
+	toColumn: Corporations.CORPORATION_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship db216384-9529-4c32-ad9b-f98eec3644e9
 	fromColumn: f_midas_sales.COUNTRY_ID
-	toColumn: d_countries.COUNTRY_ID
+	toColumn: Countries.COUNTRY_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship 74e35915-9c37-465e-805c-da551fd83bbf
 	fromColumn: f_midas_sales.INTERNATIONAL_PACK_ID
-	toColumn: d_international_packs.INTERNATIONAL_PACK_ID
+	toColumn: 'International Packs'.INTERNATIONAL_PACK_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship 7312787b-987d-4898-bf0f-7fc10842cb8c
 	fromColumn: f_midas_sales.INTERNATIONAL_PRODUCT_ID
-	toColumn: d_international_products.INTERNATIONAL_PRODUCT_ID
+	toColumn: 'International Products'.INTERNATIONAL_PRODUCT_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -156,7 +156,7 @@ relationship 68544f8b-5c5a-47f8-8d36-83f08b462f90
 
 relationship 6ffa2490-3fd6-487e-bbbf-d641f7a4fe29
 	fromColumn: f_midas_sales.INNOVATION_INSIGHTS_ID
-	toColumn: d_innovation_insights.INNOVATION_INSIGHTS_ID
+	toColumn: 'Innovation Insights'.INNOVATION_INSIGHTS_ID
 
 	annotation PBI_IsFromSource = FS
 
@@ -198,29 +198,30 @@ relationship bd4c305d-cee1-44ce-aab8-ec0ff6639a22
 
 relationship 2df8de21-5a03-4350-aa23-9b2326a211d2
 	fromColumn: f_midas_sales.MARKET_ID
-	toColumn: d_reconstructed_markets.MARKET_ID
+	toColumn: Markets.MARKET_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship fc3ebbc8-4bc1-47bf-a74d-f4102d0c8359
 	fromColumn: f_midas_sales.CATEGORY_ID
-	toColumn: d_categories.CATEGORY_ID
+	toColumn: Categories.CATEGORY_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship 2a4f797c-c204-4eb0-99ee-b9e438804e91
 	fromColumn: f_midas_sales.CATEGORY_L2_ID
-	toColumn: d_categories_l2.CATEGORY_L2_ID
+	toColumn: 'Categories L2'.CATEGORY_L2_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship 439bccae-91d8-4455-8382-ccb123582626
 	fromColumn: f_midas_sales.CATEGORY_L3_ID
-	toColumn: d_categories_l3.CATEGORY_L3_ID
+	toColumn: 'Categories L3'.CATEGORY_L3_ID
 
 	annotation PBI_IsFromSource = FS
 
 relationship e3d4a1fd-1fef-4f79-96c4-bdb50ff0d5d
 	fromColumn: f_midas_sales.QUARTER_ID
-	toColumn: d_time.QUARTER_ID
+	toColumn: Time.QUARTER_ID
+
 

@@ -1,4 +1,4 @@
-table d_nfc123
+table NFC
 	lineageTag: 58cef4e6-666a-4adf-815d-1cb9ffc72e07
 
 	column NFC123_ID
@@ -32,7 +32,6 @@ table d_nfc123
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_nfc123 = m
 		mode: dual
 		source =
@@ -45,4 +44,5 @@ table d_nfc123
 				    d_nfc123_Table
 
 	annotation PBI_ResultType = Table
+
 

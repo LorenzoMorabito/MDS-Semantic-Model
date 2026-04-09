@@ -1,4 +1,4 @@
-table d_countries
+table Countries
 	lineageTag: ab66475e-c8fd-4063-a36e-9159d969cc46
 
 	column COUNTRY_ID
@@ -50,7 +50,6 @@ table d_countries
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_countries = m
 		mode: dual
 		source =
@@ -61,4 +60,5 @@ table d_countries
 				    d_countries_Table = trusted_starschema_02_Schema{[Name="d_countries",Kind="Table"]}[Data]
 				in
 				    d_countries_Table
+
 

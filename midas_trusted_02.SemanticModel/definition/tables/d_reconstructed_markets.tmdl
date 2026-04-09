@@ -1,4 +1,4 @@
-table d_reconstructed_markets
+table Markets
 	lineageTag: bb56ea9e-0227-4f55-a015-802ed29c381c
 
 	column MARKET_ID
@@ -50,7 +50,6 @@ table d_reconstructed_markets
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_reconstructed_markets = m
 		mode: dual
 		source =
@@ -63,4 +62,5 @@ table d_reconstructed_markets
 				    d_reconstructed_markets_Table
 
 	annotation PBI_ResultType = Table
+
 

@@ -1,4 +1,4 @@
-table d_categories
+table Categories
 	lineageTag: 1f2a3751-1cdd-4298-a06a-dfe845e64966
 
 	column CATEGORY_ID
@@ -33,7 +33,6 @@ table d_categories
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_categories = m
 		mode: dual
 		source =
@@ -44,4 +43,5 @@ table d_categories
 				    d_categories_Table = trusted_starschema_02_Schema{[Name="d_categories",Kind="Table"]}[Data]
 				in
 				    d_categories_Table
+
 

@@ -1,4 +1,4 @@
-table d_international_brands
+table 'International Brands'
 	lineageTag: 0f2c14ad-e444-49eb-91d9-9adbc2fdde6c
 
 	column INTERNATIONAL_BRAND_ID
@@ -32,7 +32,6 @@ table d_international_brands
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_international_brands = m
 		mode: dual
 		source =
@@ -43,4 +42,5 @@ table d_international_brands
 				    d_international_brands_Table = trusted_starschema_02_Schema{[Name="d_international_brands",Kind="Table"]}[Data]
 				in
 				    d_international_brands_Table
+
 

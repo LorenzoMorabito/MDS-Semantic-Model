@@ -1,4 +1,4 @@
-table d_molecules
+table Molecules
 	lineageTag: 5f0ea395-31a7-4796-a875-e61f24c362e6
 
 	column MOLECULE_ID
@@ -41,7 +41,6 @@ table d_molecules
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_molecules = m
 		mode: dual
 		source =
@@ -54,4 +53,5 @@ table d_molecules
 				    d_molecules_Table
 
 	annotation PBI_ResultType = Table
+
 

@@ -1,4 +1,4 @@
-table d_categories_l3
+table 'Categories L3'
 	lineageTag: 8504d684-31d0-4c10-9516-ab4b7c61c415
 
 	column CATEGORY_L3_ID
@@ -33,7 +33,6 @@ table d_categories_l3
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_categories_l3 = m
 		mode: dual
 		source =

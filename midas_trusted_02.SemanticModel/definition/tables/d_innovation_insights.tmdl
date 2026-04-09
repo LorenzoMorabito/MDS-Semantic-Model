@@ -1,4 +1,4 @@
-table d_innovation_insights
+table 'Innovation Insights'
 	isHidden
 	lineageTag: 721679db-3352-4282-b36a-0128ac46c89e
 
@@ -33,7 +33,6 @@ table d_innovation_insights
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_innovation_insights = m
 		mode: dual
 		source =
@@ -44,4 +43,5 @@ table d_innovation_insights
 				    d_innovation_insights_Table = trusted_starschema_02_Schema{[Name="d_innovation_insights",Kind="Table"]}[Data]
 				in
 				    d_innovation_insights_Table
+
 

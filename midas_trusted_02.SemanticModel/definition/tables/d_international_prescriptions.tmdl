@@ -1,4 +1,4 @@
-table d_international_prescriptions
+table Prescriptions
 	lineageTag: c5125d79-3979-4595-a18c-5b29db00910a
 
 	column INTERNATIONAL_PRESCRIPTION_ID
@@ -41,7 +41,6 @@ table d_international_prescriptions
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_international_prescriptions = m
 		mode: dual
 		source =
@@ -52,4 +51,5 @@ table d_international_prescriptions
 				    d_international_prescriptions_Table = trusted_starschema_02_Schema{[Name="d_international_prescriptions",Kind="Table"]}[Data]
 				in
 				    d_international_prescriptions_Table
+
 

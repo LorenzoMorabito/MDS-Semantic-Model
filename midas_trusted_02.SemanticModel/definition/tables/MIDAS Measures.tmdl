@@ -65,302 +65,426 @@ table 'MIDAS Measures'
 		displayFolder: Base
 		lineageTag: 489deaf6-8cfb-4981-aeff-159e3fcdb603
 
-	measure 'Units -1' = CALCULATE ( [Units], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+	measure 'Units PY' = CALCULATE ( [Units], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
-		displayFolder: Base PP
+		displayFolder: 'Base PY'
 		lineageTag: 9ac8717b-fb9f-4c1b-9b22-b76863f3640e
 
-	measure 'CU -1' = [Counting Units -1]
+	measure 'CU PY' = [Counting Units PY]
 		formatString: #,0;-#,0;0
-		displayFolder: Base PP
+		displayFolder: 'Base PY'
 		lineageTag: 812ce258-0fda-4476-baa3-671d39df72c0
 
-	measure 'Counting Units -1' = CALCULATE ( [Counting Units], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+	measure 'Counting Units PY' = CALCULATE ( [Counting Units], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
 		isHidden
 		displayFolder: Technical
 		lineageTag: 6a2f4ce1-8188-4253-b4fc-a89f8ebfbb2d
 
-	measure 'SU -1' = [Standard Units -1]
+	measure 'SU PY' = [Standard Units PY]
 		formatString: #,0;-#,0;0
-		displayFolder: Base PP
+		displayFolder: 'Base PY'
 		lineageTag: 1fb95c79-d0e6-477f-ad6d-b6331d771ecc
 
-	measure 'Standard Units -1' = CALCULATE ( [Standard Units], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+	measure 'Standard Units PY' = CALCULATE ( [Standard Units], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
 		isHidden
 		displayFolder: Technical
 		lineageTag: f234b151-57f7-4758-9d60-6cbf2727ed38
 
-	measure 'Sales LE -1' = CALCULATE ( [Sales LE], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+	measure 'Sales LE PY' = CALCULATE ( [Sales LE], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: Base PP
+		displayFolder: 'Base PY'
 		lineageTag: 5aec62df-cbdf-4545-9514-71545d9ad459
 
-	measure 'Sales E -1' = CALCULATE ( [Sales E], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+	measure 'Sales E PY' = CALCULATE ( [Sales E], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: Base PP
+		displayFolder: 'Base PY'
 		lineageTag: a60c1a60-d22f-4696-b21d-ec50f0a4bcb0
 
-	measure 'Sales LC -1' = CALCULATE ( [Sales LC], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
+	measure 'Sales LC PY' = CALCULATE ( [Sales LC], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: Base PP
+		displayFolder: 'Base PY'
 		lineageTag: d154ab4f-7b8c-424b-bfa0-0e93f5165374
 
 	measure 'Units CUM' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			VAR CurrentYear = MAX ( d_time[YEAR] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( Time[YEAR] )
 			RETURN
 			    CALCULATE (
 			        [Units],
-			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			        FILTER ( ALL ( Time[QUARTER_ID], Time[YEAR] ), Time[YEAR] = CurrentYear && Time[QUARTER_ID] <= CurrentQuarter )
 			    )
 		formatString: #,0;-#,0;0
 		displayFolder: CUM
 		lineageTag: 1e8feb6c-96d3-4e18-b259-327e4a0bd7fe
 
-	measure 'Units CUM -1' = CALCULATE ( [Units CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'Units CUM PY' = CALCULATE ( [Units CUM], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
-		displayFolder: CUM PP
+		displayFolder: 'CUM PY'
 		lineageTag: 4e317071-226c-4a82-b78d-1afe5adfe7f5
 
 	measure 'CU CUM' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			VAR CurrentYear = MAX ( d_time[YEAR] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( Time[YEAR] )
 			RETURN
 			    CALCULATE (
 			        [CU],
-			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			        FILTER ( ALL ( Time[QUARTER_ID], Time[YEAR] ), Time[YEAR] = CurrentYear && Time[QUARTER_ID] <= CurrentQuarter )
 			    )
 		formatString: #,0;-#,0;0
 		displayFolder: CUM
 		lineageTag: 63b9361f-f3a8-450b-aa90-217134f1c502
 
-	measure 'CU CUM -1' = CALCULATE ( [CU CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'CU CUM PY' = CALCULATE ( [CU CUM], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
-		displayFolder: CUM PP
+		displayFolder: 'CUM PY'
 		lineageTag: 2c1ab984-bb4f-4353-8afc-6c4e46fe64ea
 
 	measure 'SU CUM' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			VAR CurrentYear = MAX ( d_time[YEAR] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( Time[YEAR] )
 			RETURN
 			    CALCULATE (
 			        [SU],
-			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			        FILTER ( ALL ( Time[QUARTER_ID], Time[YEAR] ), Time[YEAR] = CurrentYear && Time[QUARTER_ID] <= CurrentQuarter )
 			    )
 		formatString: #,0;-#,0;0
 		displayFolder: CUM
 		lineageTag: 571c526d-43f4-47ba-8c93-2b2b994130b4
 
-	measure 'SU CUM -1' = CALCULATE ( [SU CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'SU CUM PY' = CALCULATE ( [SU CUM], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
-		displayFolder: CUM PP
+		displayFolder: 'CUM PY'
 		lineageTag: c3909101-8915-4cbf-b84e-f316f2ff7f83
 
 	measure 'Sales E CUM' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			VAR CurrentYear = MAX ( d_time[YEAR] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( Time[YEAR] )
 			RETURN
 			    CALCULATE (
 			        [Sales E],
-			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			        FILTER ( ALL ( Time[QUARTER_ID], Time[YEAR] ), Time[YEAR] = CurrentYear && Time[QUARTER_ID] <= CurrentQuarter )
 			    )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: CUM
 		lineageTag: bc715450-bcda-4feb-94ef-cf25db1ad5e3
 
-	measure 'Sales E CUM -1' = CALCULATE ( [Sales E CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'Sales E CUM PY' = CALCULATE ( [Sales E CUM], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: CUM PP
+		displayFolder: 'CUM PY'
 		lineageTag: 54ca0e14-57a4-4731-aa4a-c280f6a47e01
 
 	measure 'Sales LE CUM' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			VAR CurrentYear = MAX ( d_time[YEAR] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( Time[YEAR] )
 			RETURN
 			    CALCULATE (
 			        [Sales LE],
-			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			        FILTER ( ALL ( Time[QUARTER_ID], Time[YEAR] ), Time[YEAR] = CurrentYear && Time[QUARTER_ID] <= CurrentQuarter )
 			    )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: CUM
 		lineageTag: 2ec913de-ff85-449c-97b4-4810371ceb9a
 
-	measure 'Sales LE CUM -1' = CALCULATE ( [Sales LE CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'Sales LE CUM PY' = CALCULATE ( [Sales LE CUM], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: CUM PP
+		displayFolder: 'CUM PY'
 		lineageTag: d0bd5da0-df07-4f1f-8717-6d2ae9bff238
 
 	measure 'Sales LC CUM' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			VAR CurrentYear = MAX ( d_time[YEAR] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( Time[YEAR] )
 			RETURN
 			    CALCULATE (
 			        [Sales LC],
-			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
+			        FILTER ( ALL ( Time[QUARTER_ID], Time[YEAR] ), Time[YEAR] = CurrentYear && Time[QUARTER_ID] <= CurrentQuarter )
 			    )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: CUM
 		lineageTag: 2f0b8ef5-8ee8-43a5-816c-5827d5dbd4e1
 
-	measure 'Sales LC CUM -1' = CALCULATE ( [Sales LC CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'Sales LC CUM PY' = CALCULATE ( [Sales LC CUM], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: CUM PP
+		displayFolder: 'CUM PY'
 		lineageTag: a8f560fe-cf5d-4f48-aaf3-bd9f0b91e652
 
-	measure 'Sales USD -1' = CALCULATE ( [Sales USD], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: Base PP
-		lineageTag: bba33285-21db-45c7-b047-8c8ab58cc208
-
-	measure 'Total Daily Doses -1' = CALCULATE ( [Total Daily Doses], DATEADD ( d_time[QUARTER_ID], -1, QUARTER ) )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: Base PP
-		lineageTag: c52937f2-caf1-4a0f-a54b-cd6a82053ecb
-
-	measure 'Sales USD CUM' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			VAR CurrentYear = MAX ( d_time[YEAR] )
-			RETURN
-			    CALCULATE (
-			        [Sales USD],
-			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
-			    )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: CUM
-		lineageTag: cdf85139-f7db-4740-8dc4-e8a18f68cb4d
-
-	measure 'Sales USD CUM -1' = CALCULATE ( [Sales USD CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: CUM PP
-		lineageTag: 73a3de47-6749-4d40-a295-a2cb62642f96
-
-	measure 'Total Daily Doses CUM' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			VAR CurrentYear = MAX ( d_time[YEAR] )
-			RETURN
-			    CALCULATE (
-			        [Total Daily Doses],
-			        FILTER ( ALL ( d_time[QUARTER_ID], d_time[YEAR] ), d_time[YEAR] = CurrentYear && d_time[QUARTER_ID] <= CurrentQuarter )
-			    )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: CUM
-		lineageTag: c1e73902-d1da-4bfa-a3de-b3b9b0500583
-
-	measure 'Total Daily Doses CUM -1' = CALCULATE ( [Total Daily Doses CUM], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: CUM PP
-		lineageTag: 92c92f17-9872-4512-ba9c-1f812b176554
-
 	measure 'Units MAT' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
 			RETURN
-			    CALCULATE ( [Units], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+			    CALCULATE ( [Units], DATESINPERIOD ( Time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
 		formatString: #,0;-#,0;0
 		displayFolder: MAT
 		lineageTag: 02dc38f6-5f8e-4038-8f07-c9ba268ddcc5
 
-	measure 'Units MAT -1' = CALCULATE ( [Units MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'Units MAT PY' = CALCULATE ( [Units MAT], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
-		displayFolder: MAT PP
+		displayFolder: 'MAT PY'
 		lineageTag: c9f25485-76e7-42c9-a321-26111bc7ef0a
 
 	measure 'CU MAT' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
 			RETURN
-			    CALCULATE ( [CU], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+			    CALCULATE ( [CU], DATESINPERIOD ( Time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
 		formatString: #,0;-#,0;0
 		displayFolder: MAT
 		lineageTag: a0e18e2b-bfc0-422e-af97-98db96b7e330
 
-	measure 'CU MAT -1' = CALCULATE ( [CU MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'CU MAT PY' = CALCULATE ( [CU MAT], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
-		displayFolder: MAT PP
+		displayFolder: 'MAT PY'
 		lineageTag: c4e3d1ab-9050-4d6d-b696-a22120f6c414
 
 	measure 'SU MAT' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
 			RETURN
-			    CALCULATE ( [SU], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+			    CALCULATE ( [SU], DATESINPERIOD ( Time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
 		formatString: #,0;-#,0;0
 		displayFolder: MAT
 		lineageTag: 72cad207-6b2b-4d1f-b023-4d5f7e226f3f
 
-	measure 'SU MAT -1' = CALCULATE ( [SU MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'SU MAT PY' = CALCULATE ( [SU MAT], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0;-#,0;0
-		displayFolder: MAT PP
+		displayFolder: 'MAT PY'
 		lineageTag: 20bba8ca-6fd9-4516-8ee8-6d881358af3f
 
 	measure 'Sales E MAT' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
 			RETURN
-			    CALCULATE ( [Sales E], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+			    CALCULATE ( [Sales E], DATESINPERIOD ( Time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: MAT
 		lineageTag: 3f3782c8-7007-4e2a-83b4-f19d804f021c
 
-	measure 'Sales E MAT -1' = CALCULATE ( [Sales E MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'Sales E MAT PY' = CALCULATE ( [Sales E MAT], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: MAT PP
+		displayFolder: 'MAT PY'
 		lineageTag: 4c78fb51-cd9b-49f2-aa58-e53e26145f6a
 
 	measure 'Sales LE MAT' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
 			RETURN
-			    CALCULATE ( [Sales LE], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+			    CALCULATE ( [Sales LE], DATESINPERIOD ( Time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: MAT
 		lineageTag: 01a58668-d25d-433b-bf27-c8ea923f4447
 
-	measure 'Sales LE MAT -1' = CALCULATE ( [Sales LE MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'Sales LE MAT PY' = CALCULATE ( [Sales LE MAT], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: MAT PP
+		displayFolder: 'MAT PY'
 		lineageTag: 05976461-4ad3-4277-97e5-6e0a1eb6834d
 
 	measure 'Sales LC MAT' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
 			RETURN
-			    CALCULATE ( [Sales LC], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+			    CALCULATE ( [Sales LC], DATESINPERIOD ( Time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: MAT
 		lineageTag: 9c0b3021-a089-40cd-afd7-6121fda8945c
 
-	measure 'Sales LC MAT -1' = CALCULATE ( [Sales LC MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
+	measure 'Sales LC MAT PY' = CALCULATE ( [Sales LC MAT], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
 		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: MAT PP
+		displayFolder: 'MAT PY'
 		lineageTag: 19447267-4afc-4608-b07c-8871f78acfb5
-
-	measure 'Sales USD MAT' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			RETURN
-			    CALCULATE ( [Sales USD], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: MAT
-		lineageTag: 57c95ee3-4417-4ad8-ab08-cf242b4d6b7d
-
-	measure 'Sales USD MAT -1' = CALCULATE ( [Sales USD MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: MAT PP
-		lineageTag: 0dc6c48c-7c16-434d-b729-6537fd8434d5
-
-	measure 'Total Daily Doses MAT' =
-			VAR CurrentQuarter = MAX ( d_time[QUARTER_ID] )
-			RETURN
-			    CALCULATE ( [Total Daily Doses], DATESINPERIOD ( d_time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: MAT
-		lineageTag: 5e5dd9e6-3967-4f77-bf81-e4f165bc1b81
-
-	measure 'Total Daily Doses MAT -1' = CALCULATE ( [Total Daily Doses MAT], DATEADD ( d_time[QUARTER_ID], -1, YEAR ) )
-		formatString: #,0.0;-#,0.0;0.0
-		displayFolder: MAT PP
-		lineageTag: 9fc46ce2-21c8-4725-8e51-e9d9a39af839
 
 	measure LAUNCH_DATE = SELECTEDVALUE ( f_midas_sales[PRODUCT_LAUNCH_DATE] )
 		formatString: yyyy-mm-dd
 		displayFolder: Base
 		lineageTag: 6d5f5142-9f93-4e92-8749-52f1965f3d16
+
+	measure 'Sales USD PY' = CALCULATE ( [Sales USD], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'Base PY'
+		lineageTag: bba33285-21db-45c7-b047-8c8ab58cc208
+
+	measure 'Total Daily Doses PY' = CALCULATE ( [Total Daily Doses], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'Base PY'
+		lineageTag: c52937f2-caf1-4a0f-a54b-cd6a82053ecb
+
+	measure 'Sales USD CUM' =
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( Time[YEAR] )
+			RETURN
+			    CALCULATE (
+			        [Sales USD],
+			        FILTER ( ALL ( Time[QUARTER_ID], Time[YEAR] ), Time[YEAR] = CurrentYear && Time[QUARTER_ID] <= CurrentQuarter )
+			    )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: CUM
+		lineageTag: cdf85139-f7db-4740-8dc4-e8a18f68cb4d
+
+	measure 'Sales USD CUM PY' = CALCULATE ( [Sales USD CUM], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'CUM PY'
+		lineageTag: 73a3de47-6749-4d40-a295-a2cb62642f96
+
+	measure 'Total Daily Doses CUM' =
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			VAR CurrentYear = MAX ( Time[YEAR] )
+			RETURN
+			    CALCULATE (
+			        [Total Daily Doses],
+			        FILTER ( ALL ( Time[QUARTER_ID], Time[YEAR] ), Time[YEAR] = CurrentYear && Time[QUARTER_ID] <= CurrentQuarter )
+			    )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: CUM
+		lineageTag: c1e73902-d1da-4bfa-a3de-b3b9b0500583
+
+	measure 'Total Daily Doses CUM PY' = CALCULATE ( [Total Daily Doses CUM], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'CUM PY'
+		lineageTag: 92c92f17-9872-4512-ba9c-1f812b176554
+
+	measure 'Sales USD MAT' =
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			RETURN
+			    CALCULATE ( [Sales USD], DATESINPERIOD ( Time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: MAT
+		lineageTag: 57c95ee3-4417-4ad8-ab08-cf242b4d6b7d
+
+	measure 'Sales USD MAT PY' = CALCULATE ( [Sales USD MAT], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'MAT PY'
+		lineageTag: 0dc6c48c-7c16-434d-b729-6537fd8434d5
+
+	measure 'Total Daily Doses MAT' =
+			VAR CurrentQuarter = MAX ( Time[QUARTER_ID] )
+			RETURN
+			    CALCULATE ( [Total Daily Doses], DATESINPERIOD ( Time[QUARTER_ID], CurrentQuarter, -4, QUARTER ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: MAT
+		lineageTag: 5e5dd9e6-3967-4f77-bf81-e4f165bc1b81
+
+	measure 'Total Daily Doses MAT PY' = CALCULATE ( [Total Daily Doses MAT], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+		formatString: #,0.0;-#,0.0;0.0
+		displayFolder: 'MAT PY'
+		lineageTag: 9fc46ce2-21c8-4725-8e51-e9d9a39af839
+
+	measure 'Units Market Total' =
+			CALCULATE (
+			    [Units],
+			    REMOVEFILTERS ( Products ),
+			    REMOVEFILTERS ( 'International Products' ),
+			    REMOVEFILTERS ( 'International Packs' ),
+			    REMOVEFILTERS ( Molecules ),
+			    REMOVEFILTERS ( d_generic_product_classification ),
+			    REMOVEFILTERS ( Corporations ),
+			    REMOVEFILTERS ( d_protection_current ),
+			    REMOVEFILTERS ( Prescriptions )
+			)
+		formatString: #,0;-#,0;0
+		isHidden
+		displayFolder: Technical
+		lineageTag: 1b6f0d65-37d6-4f21-bef7-92649dfd46ee
+
+	measure 'Sales E Market Total' =
+			CALCULATE (
+			    [Sales E],
+			    REMOVEFILTERS ( Products ),
+			    REMOVEFILTERS ( 'International Products' ),
+			    REMOVEFILTERS ( 'International Packs' ),
+			    REMOVEFILTERS ( Molecules ),
+			    REMOVEFILTERS ( d_generic_product_classification ),
+			    REMOVEFILTERS ( Corporations ),
+			    REMOVEFILTERS ( d_protection_current ),
+			    REMOVEFILTERS ( Prescriptions )
+			)
+		formatString: #,0.0;-#,0.0;0.0
+		isHidden
+		displayFolder: Technical
+		lineageTag: af3b4067-cc04-43ec-9fd0-3f7e75198eff
+
+	measure 'Sales LE Market Total' =
+			CALCULATE (
+			    [Sales LE],
+			    REMOVEFILTERS ( Products ),
+			    REMOVEFILTERS ( 'International Products' ),
+			    REMOVEFILTERS ( 'International Packs' ),
+			    REMOVEFILTERS ( Molecules ),
+			    REMOVEFILTERS ( d_generic_product_classification ),
+			    REMOVEFILTERS ( Corporations ),
+			    REMOVEFILTERS ( d_protection_current ),
+			    REMOVEFILTERS ( Prescriptions )
+			)
+		formatString: #,0.0;-#,0.0;0.0
+		isHidden
+		displayFolder: Technical
+		lineageTag: 3fe10b6b-f508-40ea-9978-9f90b953946d
+
+	measure 'Sales LC Market Total' =
+			CALCULATE (
+			    [Sales LC],
+			    REMOVEFILTERS ( Products ),
+			    REMOVEFILTERS ( 'International Products' ),
+			    REMOVEFILTERS ( 'International Packs' ),
+			    REMOVEFILTERS ( Molecules ),
+			    REMOVEFILTERS ( d_generic_product_classification ),
+			    REMOVEFILTERS ( Corporations ),
+			    REMOVEFILTERS ( d_protection_current ),
+			    REMOVEFILTERS ( Prescriptions )
+			)
+		formatString: #,0.0;-#,0.0;0.0
+		isHidden
+		displayFolder: Technical
+		lineageTag: 39534a57-278a-4a20-bc73-9fc155dd5294
+
+	measure 'Units MS%' = DIVIDE ( [Units], [Units Market Total] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Market Share'
+		lineageTag: 0b2dd8c8-bdf5-4484-8795-273b6a20f2d0
+
+	measure 'Sales E MS%' = DIVIDE ( [Sales E], [Sales E Market Total] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Market Share'
+		lineageTag: d8327012-506b-43df-a631-639fb6cee11c
+
+	measure 'Sales LE MS%' = DIVIDE ( [Sales LE], [Sales LE Market Total] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Market Share'
+		lineageTag: d394fa22-2b58-4c4d-9e50-d7384fc23431
+
+	measure 'Sales LC MS%' = DIVIDE ( [Sales LC], [Sales LC Market Total] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 'Market Share'
+		lineageTag: 2f22c4f0-83e5-48e8-9b37-b50e5737ed35
+
+	measure 'Units EI' =
+			VAR CurrentShare = [Units MS%]
+			VAR PreviousShare = CALCULATE ( [Units MS%], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    IF ( ISBLANK ( PreviousShare ), BLANK (), DIVIDE ( CurrentShare, PreviousShare ) * 100 )
+		formatString: 0.0;-0.0;0.0
+		displayFolder: 'Evolution Index'
+		lineageTag: 0260071f-285f-4ea9-a846-cdeb2c9310be
+
+	measure 'Sales E EI' =
+			VAR CurrentShare = [Sales E MS%]
+			VAR PreviousShare = CALCULATE ( [Sales E MS%], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    IF ( ISBLANK ( PreviousShare ), BLANK (), DIVIDE ( CurrentShare, PreviousShare ) * 100 )
+		formatString: 0.0;-0.0;0.0
+		displayFolder: 'Evolution Index'
+		lineageTag: 580dd31d-3d22-48b2-a2a1-955afbac1f70
+
+	measure 'Sales LE EI' =
+			VAR CurrentShare = [Sales LE MS%]
+			VAR PreviousShare = CALCULATE ( [Sales LE MS%], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    IF ( ISBLANK ( PreviousShare ), BLANK (), DIVIDE ( CurrentShare, PreviousShare ) * 100 )
+		formatString: 0.0;-0.0;0.0
+		displayFolder: 'Evolution Index'
+		lineageTag: b46e00bf-68d3-4e76-b73d-75574e9b83b3
+
+	measure 'Sales LC EI' =
+			VAR CurrentShare = [Sales LC MS%]
+			VAR PreviousShare = CALCULATE ( [Sales LC MS%], DATEADD ( Time[QUARTER_ID], -1, YEAR ) )
+			RETURN
+			    IF ( ISBLANK ( PreviousShare ), BLANK (), DIVIDE ( CurrentShare, PreviousShare ) * 100 )
+		formatString: 0.0;-0.0;0.0
+		displayFolder: 'Evolution Index'
+		lineageTag: 0e67eec6-cbb0-4ecb-9dbd-ce03efb34d62
 
 	column Column
 		isHidden
@@ -375,4 +499,6 @@ table 'MIDAS Measures'
 	partition 'MIDAS Measures' = calculated
 		mode: import
 		source = Row("Column", BLANK())
+
+
 

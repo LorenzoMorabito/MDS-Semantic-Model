@@ -1,4 +1,4 @@
-table d_time
+table Time
 	lineageTag: 66ab9e87-585a-45da-aa5f-87ac76eaf140
 
 	column QUARTER_ID
@@ -82,7 +82,6 @@ table d_time
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_time = m
 		mode: dual
 		source =
@@ -95,4 +94,5 @@ table d_time
 				    d_time_Table
 
 	annotation PBI_ResultType = Table
+
 

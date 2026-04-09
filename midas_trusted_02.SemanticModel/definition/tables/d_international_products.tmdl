@@ -1,4 +1,4 @@
-table d_international_products
+table 'International Products'
 	lineageTag: ffb08322-a319-481a-ab06-7f7368094c0a
 
 	column INTERNATIONAL_PRODUCT_ID
@@ -32,7 +32,6 @@ table d_international_products
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_international_products = m
 		mode: dual
 		source =
@@ -45,4 +44,5 @@ table d_international_products
 				    d_international_products_Table
 
 	annotation PBI_ResultType = Table
+
 

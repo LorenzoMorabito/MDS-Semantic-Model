@@ -1,4 +1,4 @@
-table d_corporations
+table Corporations
 	lineageTag: 18fc1697-0192-400a-acba-2c9a7ee91a7e
 
 	column CORPORATION_ID
@@ -32,7 +32,6 @@ table d_corporations
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_corporations = m
 		mode: dual
 		source =
@@ -43,4 +42,5 @@ table d_corporations
 				    d_corporations_Table = trusted_starschema_02_Schema{[Name="d_corporations",Kind="Table"]}[Data]
 				in
 				    d_corporations_Table
+
 

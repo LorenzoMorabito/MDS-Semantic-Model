@@ -1,4 +1,4 @@
-table d_international_packs
+table 'International Packs'
 	lineageTag: 5ff7070a-d7b9-47f0-929a-19f81e09b17a
 
 	column INTERNATIONAL_PACK_ID
@@ -59,7 +59,6 @@ table d_international_packs
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_international_packs = m
 		mode: dual
 		source =
@@ -70,4 +69,5 @@ table d_international_packs
 				    d_international_packs_Table = trusted_starschema_02_Schema{[Name="d_international_packs",Kind="Table"]}[Data]
 				in
 				    d_international_packs_Table
+
 
