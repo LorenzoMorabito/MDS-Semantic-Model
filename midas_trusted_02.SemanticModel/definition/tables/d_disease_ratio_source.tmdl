@@ -1,4 +1,4 @@
-table d_disease_ratio_source
+table 'Disease Ratio Source'
 	isHidden
 	lineageTag: 702acab8-618d-41fd-b490-689b1133eb36
 
@@ -33,7 +33,6 @@ table d_disease_ratio_source
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_disease_ratio_source = m
 		mode: dual
 		source =

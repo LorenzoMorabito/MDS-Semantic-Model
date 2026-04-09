@@ -1,46 +1,46 @@
 table 'MIDAS Measures'
 	lineageTag: 5cf789ec-83f8-4950-b83a-5dca322c3871
 
-	measure Units = SUM ( f_midas_sales[UNITS] )
+	measure Units = SUM ( 'MIDAS Sales'[UNITS] )
 		formatString: #,0;-#,0;0
 		displayFolder: Base
 		lineageTag: 7e2a5eca-a943-49e3-9961-36c03b4cbe56
 
-	measure 'Counting Units' = SUM ( f_midas_sales[COUNTING_UNITS] )
+	measure 'Counting Units' = SUM ( 'MIDAS Sales'[COUNTING_UNITS] )
 		formatString: #,0;-#,0;0
 		isHidden
 		displayFolder: Technical
 		lineageTag: 8220be05-70fe-48cc-9b34-734a95cf4200
 
-	measure 'Standard Units' = SUM ( f_midas_sales[STANDARD_UNITS] )
+	measure 'Standard Units' = SUM ( 'MIDAS Sales'[STANDARD_UNITS] )
 		formatString: #,0;-#,0;0
 		isHidden
 		displayFolder: Technical
 		lineageTag: 76731f5c-f338-4f95-a933-d4c6b09d3d92
 
-	measure 'Sales LE' = SUM ( f_midas_sales[SALES_EURO_COSTANT_LOCAL_CURRENCY] )
+	measure 'Sales LE' = SUM ( 'MIDAS Sales'[SALES_EURO_COSTANT_LOCAL_CURRENCY] )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: Base
 		lineageTag: 24f85f6a-ac54-44cc-a83c-3e4c9bf52ecf
 
-	measure 'Sales USD' = SUM ( f_midas_sales[SALES_US_DOLLARS] )
+	measure 'Sales USD' = SUM ( 'MIDAS Sales'[SALES_US_DOLLARS] )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: Base
 		lineageTag: e57c9638-79d8-4dd2-ba7b-aa4324fbb6f8
 
-	measure 'Sales Local Currency' = SUM ( f_midas_sales[SALES_LOCAL_CURRENCY] )
+	measure 'Sales Local Currency' = SUM ( 'MIDAS Sales'[SALES_LOCAL_CURRENCY] )
 		formatString: #,0.0;-#,0.0;0.0
 		isHidden
 		displayFolder: Technical
 		lineageTag: 19e87f59-ca8c-479d-8cc7-a6df924fd384
 
-	measure 'Sales Euro Constant Local Currency' = SUM ( f_midas_sales[SALES_EURO_COSTANT_LOCAL_CURRENCY] )
+	measure 'Sales Euro Constant Local Currency' = SUM ( 'MIDAS Sales'[SALES_EURO_COSTANT_LOCAL_CURRENCY] )
 		formatString: #,0.0;-#,0.0;0.0
 		isHidden
 		displayFolder: Technical
 		lineageTag: d490eb4c-7052-4790-8d42-d5cc1a258220
 
-	measure 'Total Daily Doses' = SUM ( f_midas_sales[TOTAL_NUMBER_OF_DAILY_DOSES] )
+	measure 'Total Daily Doses' = SUM ( 'MIDAS Sales'[TOTAL_NUMBER_OF_DAILY_DOSES] )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: Base
 		lineageTag: faef8e88-f9ec-495a-913b-a8b74782d22e
@@ -55,7 +55,7 @@ table 'MIDAS Measures'
 		displayFolder: Base
 		lineageTag: b86d0ccc-c302-4830-9816-11eb2a7fe6b7
 
-	measure 'Sales E' = SUM ( f_midas_sales[SALES_EURO] )
+	measure 'Sales E' = SUM ( 'MIDAS Sales'[SALES_EURO] )
 		formatString: #,0.0;-#,0.0;0.0
 		displayFolder: Base
 		lineageTag: ed434b9c-ddb8-4c74-ab51-0504bdf21710
@@ -287,7 +287,7 @@ table 'MIDAS Measures'
 		displayFolder: 'MAT PY'
 		lineageTag: 19447267-4afc-4608-b07c-8871f78acfb5
 
-	measure LAUNCH_DATE = SELECTEDVALUE ( f_midas_sales[PRODUCT_LAUNCH_DATE] )
+	measure LAUNCH_DATE = SELECTEDVALUE ( 'MIDAS Sales'[PRODUCT_LAUNCH_DATE] )
 		formatString: yyyy-mm-dd
 		displayFolder: Base
 		lineageTag: 6d5f5142-9f93-4e92-8749-52f1965f3d16

@@ -8,11 +8,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["d_all_biocomp_non_biocomp_products","ATC","'Biocomparable Products'","'Biologic Molecules'","'Biologic Products'","'Biosimilar Reference Groups'","Categories","Categories L2","Categories L3","Channels","Corporations","Countries","d_diags","d_disease_ratio_source","Diseases","'Estimated Protection Expiry Date'","'Generic Product Classification'","Innovation Insights","International Brands","International Packs","Prescriptions","International Products","'Launch Status'","'Licensing Status'","Manufacturers","d_molecule_patent_expiry_date","Molecules","'Name Type'","NFC","'Non Biocomparable Products'","'Pre/Post Protection Expiry'","Products","'Current Protection'","'Historical Protection'","Markets","d_regimen","'Specialty Products'","Time","f_midas_sales"]
+annotation PBI_QueryOrder = ["'All Biocomp/Non Biocomp Products'","ATC","'Biocomparable Products'","'Biologic Molecules'","'Biologic Products'","'Biosimilar Reference Groups'","Categories","Categories L2","Categories L3","Channels","Corporations","Countries","DIAG","'Disease Ratio Source'","Diseases","'Estimated Protection Expiry Date'","'Generic Product Classification'","Innovation Insights","International Brands","International Packs","Prescriptions","International Products","'Launch Status'","'Licensing Status'","Manufacturers","'Molecule Patent Expiry Date'","Molecules","'Name Type'","NFC","'Non Biocomparable Products'","'Pre/Post Protection Expiry'","Products","'Current Protection'","'Historical Protection'","Markets","Regimen","'Specialty Products'","Time","'MIDAS Sales'"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table d_all_biocomp_non_biocomp_products
+ref table 'All Biocomp/Non Biocomp Products'
 ref table 'ATC'
 ref table 'Biocomparable Products'
 ref table 'Biologic Molecules'
@@ -24,8 +24,8 @@ ref table 'Categories L3'
 ref table Channels
 ref table Corporations
 ref table Countries
-ref table d_diags
-ref table d_disease_ratio_source
+ref table DIAG
+ref table 'Disease Ratio Source'
 ref table Diseases
 ref table 'Estimated Protection Expiry Date'
 ref table 'Generic Product Classification'
@@ -37,7 +37,7 @@ ref table 'International Products'
 ref table 'Launch Status'
 ref table 'Licensing Status'
 ref table Manufacturers
-ref table d_molecule_patent_expiry_date
+ref table 'Molecule Patent Expiry Date'
 ref table Molecules
 ref table 'Name Type'
 ref table NFC
@@ -47,10 +47,10 @@ ref table Products
 ref table 'Current Protection'
 ref table 'Historical Protection'
 ref table Markets
-ref table d_regimen
+ref table Regimen
 ref table 'Specialty Products'
 ref table Time
-ref table f_midas_sales
+ref table 'MIDAS Sales'
 ref table 'MIDAS Measures'
 
 ref cultureInfo en-US

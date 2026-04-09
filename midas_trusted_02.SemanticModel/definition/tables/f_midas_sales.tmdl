@@ -1,4 +1,4 @@
-table f_midas_sales
+table 'MIDAS Sales'
 	isHidden
 	lineageTag: c2597620-aa63-4ccd-99d0-834cd6d6aed6
 
@@ -546,7 +546,6 @@ table f_midas_sales
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition f_midas_sales = m
 		mode: directQuery
 		source =

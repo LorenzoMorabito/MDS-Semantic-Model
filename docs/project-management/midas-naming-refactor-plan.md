@@ -55,15 +55,15 @@ This refactor affects:
 | `'Biologic Products'` | `Biologic Products` | Visible | Medium | Straight rename |
 | `'Biocomparable Products'` | `Biocomparable Products` | Visible | Medium | Straight rename |
 | `'Non Biocomparable Products'` | `Non Biocomparable Products` | Visible | Medium | Straight rename |
-| `d_all_biocomp_non_biocomp_products` | `All Biocomp/Non Biocomp Products` | Visible | Low | Needs final wording confirmation |
+| `'All Biocomp/Non Biocomp Products'` | `All Biocomp/Non Biocomp Products` | Visible | Low | Needs final wording confirmation |
 | `'Biosimilar Reference Groups'` | `Biosimilar Reference Groups` | Visible | Medium | Straight rename |
-| `d_diags` | `DIAG` | Visible | Low | Needs business confirmation on acronym expansion |
-| `d_disease_ratio_source` | `Disease Ratio Source` | Visible | Low | Niche business object |
+| `DIAG` | `DIAG` | Visible | Low | Needs business confirmation on acronym expansion |
+| `'Disease Ratio Source'` | `Disease Ratio Source` | Visible | Low | Niche business object |
 | `Diseases` | `Diseases` | Visible | Medium | Straight rename |
-| `d_molecule_patent_expiry_date` | `Molecule Patent Expiry Date` | Visible | Low | Long technical/business hybrid |
-| `d_regimen` | `Regimen` | Visible | Low | Straight rename |
+| `'Molecule Patent Expiry Date'` | `Molecule Patent Expiry Date` | Visible | Low | Long technical/business hybrid |
+| `Regimen` | `Regimen` | Visible | Low | Straight rename |
 | `'Specialty Products'` | `Specialty Products` | Visible | Medium | Straight rename |
-| `f_midas_sales` | `MIDAS Sales` | Hidden | Medium | Hidden fact can also stay technical if preferred |
+| `'MIDAS Sales'` | `MIDAS Sales` | Hidden | Medium | Hidden fact can also stay technical if preferred |
 | `MIDAS Measures` | `MIDAS Measures` | Visible | Keep | Already business-friendly |
 
 ## DAX Impact
@@ -79,12 +79,12 @@ The following explicit table references exist today in measures and must be upda
 - `d_corporations`
 - `'Current Protection'`
 - `d_international_prescriptions`
-- `f_midas_sales`
+- `'MIDAS Sales'`
 
 These appear in:
 - time intelligence formulas using `DATEADD`, `DATESINPERIOD`, `MAX`, `FILTER`, `ALL`
 - `REMOVEFILTERS(...)` helpers for market-share denominators
-- `LAUNCH_DATE = SELECTEDVALUE ( f_midas_sales[PRODUCT_LAUNCH_DATE] )`
+- `LAUNCH_DATE = SELECTEDVALUE ( 'MIDAS Sales'[PRODUCT_LAUNCH_DATE] )`
 
 ## Recommended Execution Order
 
@@ -115,13 +115,13 @@ Phase 1 should include only the safest business-facing objects:
 - `d_products` -> `Products`
 - `d_reconstructed_markets` -> `Markets`
 - `d_time` -> `Time`
-- `f_midas_sales` -> `MIDAS Sales` or keep technical because hidden
+- `'MIDAS Sales'` -> `MIDAS Sales` or keep technical because hidden
 
 ## Open Wording Decisions
 
 These should be confirmed before applying the rename:
 
-- `d_diags` -> `DIAG` or a fuller business label
-- `d_all_biocomp_non_biocomp_products` target wording
-- `f_midas_sales` whether to keep technical because hidden
+- `DIAG` -> `DIAG` or a fuller business label
+- `'All Biocomp/Non Biocomp Products'` target wording
+- `'MIDAS Sales'` whether to keep technical because hidden
 - whether `Pre/Post Protection Expiry` should use slash or plain words

@@ -1,4 +1,4 @@
-table d_diags
+table DIAG
 	lineageTag: 6203dff6-2f1c-4909-b1bf-951ce316f327
 
 	column DIAG4_ID
@@ -41,7 +41,6 @@ table d_diags
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_diags = m
 		mode: dual
 		source =

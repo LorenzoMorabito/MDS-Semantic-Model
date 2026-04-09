@@ -1,4 +1,4 @@
-table d_regimen
+table Regimen
 	isHidden
 	lineageTag: ddf317f0-d6d0-4f58-ad73-32b83e031e14
 
@@ -33,7 +33,6 @@ table d_regimen
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_regimen = m
 		mode: dual
 		source =

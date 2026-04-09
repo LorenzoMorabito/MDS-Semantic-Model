@@ -1,4 +1,4 @@
-table d_molecule_patent_expiry_date
+table 'Molecule Patent Expiry Date'
 	isHidden
 	lineageTag: b115dc69-4eb4-467e-9ff4-c4b7fad1099d
 
@@ -33,7 +33,6 @@ table d_molecule_patent_expiry_date
 		sourceColumn: _trusted_ts
 
 		annotation SummarizationSetBy = Automatic
-
 	partition d_molecule_patent_expiry_date = m
 		mode: dual
 		source =
