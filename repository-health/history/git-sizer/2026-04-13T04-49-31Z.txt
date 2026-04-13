@@ -1,0 +1,54 @@
+Processing blobs: 240                        
+Processing trees: 95                        
+Processing commits: 13                        
+Matching commits to trees: 13                        
+Processing annotated tags: 0                        
+Processing references: 4                        
+| Name                         | Value     | Level of concern               |
+| ---------------------------- | --------- | ------------------------------ |
+| Overall repository size      |           |                                |
+| * Commits                    |           |                                |
+|   * Count                    |    13     |                                |
+|   * Total size               |  3.45 KiB |                                |
+| * Trees                      |           |                                |
+|   * Count                    |    95     |                                |
+|   * Total size               |  34.4 KiB |                                |
+|   * Total tree entries       |   748     |                                |
+| * Blobs                      |           |                                |
+|   * Count                    |   240     |                                |
+|   * Total size               |   689 KiB |                                |
+| * Annotated tags             |           |                                |
+|   * Count                    |     0     |                                |
+| * References                 |           |                                |
+|   * Count                    |     4     |                                |
+|     * Branches               |     1     |                                |
+|     * Remote-tracking refs   |     3     |                                |
+|                              |           |                                |
+| Biggest objects              |           |                                |
+| * Commits                    |           |                                |
+|   * Maximum size         [1] |   297 B   |                                |
+|   * Maximum parents      [2] |     1     |                                |
+| * Trees                      |           |                                |
+|   * Maximum entries      [3] |    40     |                                |
+| * Blobs                      |           |                                |
+|   * Maximum size         [4] |  32.2 KiB |                                |
+|                              |           |                                |
+| History structure            |           |                                |
+| * Maximum history depth      |    12     |                                |
+| * Maximum tag depth          |     0     |                                |
+|                              |           |                                |
+| Biggest checkouts            |           |                                |
+| * Number of directories  [5] |    26     |                                |
+| * Maximum path depth     [5] |     5     |                                |
+| * Maximum path length    [5] |    88 B   |                                |
+| * Number of files        [5] |    81     |                                |
+| * Total size of files    [6] |   275 KiB |                                |
+| * Number of symlinks         |     0     |                                |
+| * Number of submodules       |     0     |                                |
+
+[1]  f5c5e5125d05aa131b3d0384f7ff4a3c718529de (refs/remotes/origin/repo-health-data)
+[2]  51ecb73bac5e6b7373e30ad28237438983f2e162 (refs/remotes/origin/codex-midas-parity-foundation)
+[3]  aa1a3cad44b34943216692e7abd762c352ab8a59 (refs/remotes/origin/codex-midas-parity-foundation:midas_trusted_02.SemanticModel/definition/tables)
+[4]  cea8bb48cf2917a74279e85eb9161b0467f0e7d6 (refs/remotes/origin/codex-midas-parity-foundation:repository-health/scripts/RepoHealth.Common.ps1)
+[5]  a9c5efc4f52bdd1196c8f758a073e4c2b3bdbb0e (refs/remotes/origin/codex-midas-parity-foundation^{tree})
+[6]  38c21120f9cdf41b6730ce676094750b2af7ca58 (75bff878f599a8be63ae07aa770905dd58258dec^{tree})
