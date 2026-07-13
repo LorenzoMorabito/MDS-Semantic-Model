@@ -1,0 +1,53 @@
+Processing blobs: 305                        
+Processing trees: 160                        
+Processing commits: 26                        
+Matching commits to trees: 26                        
+Processing annotated tags: 0                        
+Processing references: 4                        
+| Name                         | Value     | Level of concern               |
+| ---------------------------- | --------- | ------------------------------ |
+| Overall repository size      |           |                                |
+| * Commits                    |           |                                |
+|   * Count                    |    26     |                                |
+|   * Total size               |  7.83 KiB |                                |
+| * Trees                      |           |                                |
+|   * Count                    |   160     |                                |
+|   * Total size               |  54.2 KiB |                                |
+|   * Total tree entries       |  1.16 k   |                                |
+| * Blobs                      |           |                                |
+|   * Count                    |   305     |                                |
+|   * Total size               |  1.06 MiB |                                |
+| * Annotated tags             |           |                                |
+|   * Count                    |     0     |                                |
+| * References                 |           |                                |
+|   * Count                    |     4     |                                |
+|     * Branches               |     1     |                                |
+|     * Remote-tracking refs   |     3     |                                |
+|                              |           |                                |
+| Biggest objects              |           |                                |
+| * Commits                    |           |                                |
+|   * Maximum size         [1] |   345 B   |                                |
+|   * Maximum parents      [1] |     1     |                                |
+| * Trees                      |           |                                |
+|   * Maximum entries      [2] |    40     |                                |
+| * Blobs                      |           |                                |
+|   * Maximum size         [3] |  32.2 KiB |                                |
+|                              |           |                                |
+| History structure            |           |                                |
+| * Maximum history depth      |    14     |                                |
+| * Maximum tag depth          |     0     |                                |
+|                              |           |                                |
+| Biggest checkouts            |           |                                |
+| * Number of directories  [4] |    26     |                                |
+| * Maximum path depth     [4] |     5     |                                |
+| * Maximum path length    [4] |    88 B   |                                |
+| * Number of files        [4] |    81     |                                |
+| * Total size of files    [5] |   275 KiB |                                |
+| * Number of symlinks         |     0     |                                |
+| * Number of submodules       |     0     |                                |
+
+[1]  733d32669e73d259dee529908095d2cb634fb33a (refs/remotes/origin/repo-health-data)
+[2]  aa1a3cad44b34943216692e7abd762c352ab8a59 (refs/remotes/origin/codex-midas-parity-foundation:midas_trusted_02.SemanticModel/definition/tables)
+[3]  cea8bb48cf2917a74279e85eb9161b0467f0e7d6 (refs/remotes/origin/codex-midas-parity-foundation:repository-health/scripts/RepoHealth.Common.ps1)
+[4]  a9c5efc4f52bdd1196c8f758a073e4c2b3bdbb0e (refs/remotes/origin/codex-midas-parity-foundation^{tree})
+[5]  38c21120f9cdf41b6730ce676094750b2af7ca58 (75bff878f599a8be63ae07aa770905dd58258dec^{tree})
