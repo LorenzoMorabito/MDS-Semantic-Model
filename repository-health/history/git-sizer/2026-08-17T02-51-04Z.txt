@@ -1,0 +1,53 @@
+Processing blobs: 330                        
+Processing trees: 185                        
+Processing commits: 31                        
+Matching commits to trees: 31                        
+Processing annotated tags: 0                        
+Processing references: 4                        
+| Name                         | Value     | Level of concern               |
+| ---------------------------- | --------- | ------------------------------ |
+| Overall repository size      |           |                                |
+| * Commits                    |           |                                |
+|   * Count                    |    31     |                                |
+|   * Total size               |  9.52 KiB |                                |
+| * Trees                      |           |                                |
+|   * Count                    |   185     |                                |
+|   * Total size               |  68.7 KiB |                                |
+|   * Total tree entries       |  1.46 k   |                                |
+| * Blobs                      |           |                                |
+|   * Count                    |   330     |                                |
+|   * Total size               |  1.31 MiB |                                |
+| * Annotated tags             |           |                                |
+|   * Count                    |     0     |                                |
+| * References                 |           |                                |
+|   * Count                    |     4     |                                |
+|     * Branches               |     1     |                                |
+|     * Remote-tracking refs   |     3     |                                |
+|                              |           |                                |
+| Biggest objects              |           |                                |
+| * Commits                    |           |                                |
+|   * Maximum size         [1] |   345 B   |                                |
+|   * Maximum parents      [1] |     1     |                                |
+| * Trees                      |           |                                |
+|   * Maximum entries      [2] |    40     |                                |
+| * Blobs                      |           |                                |
+|   * Maximum size         [3] |  37.3 KiB |                                |
+|                              |           |                                |
+| History structure            |           |                                |
+| * Maximum history depth      |    19     |                                |
+| * Maximum tag depth          |     0     |                                |
+|                              |           |                                |
+| Biggest checkouts            |           |                                |
+| * Number of directories  [4] |    26     |                                |
+| * Maximum path depth     [4] |     5     |                                |
+| * Maximum path length    [4] |    88 B   |                                |
+| * Number of files        [4] |    81     |                                |
+| * Total size of files    [5] |   301 KiB |                                |
+| * Number of symlinks         |     0     |                                |
+| * Number of submodules       |     0     |                                |
+
+[1]  455cc039b14d758568958923c89dfee3d41e96f5 (refs/remotes/origin/repo-health-data)
+[2]  aa1a3cad44b34943216692e7abd762c352ab8a59 (refs/remotes/origin/codex-midas-parity-foundation:midas_trusted_02.SemanticModel/definition/tables)
+[3]  b7664317d0606f0eb9ffdb81abea79559370bd0d (refs/remotes/origin/repo-health-data:repository-health/history/top-files-history.csv)
+[4]  a9c5efc4f52bdd1196c8f758a073e4c2b3bdbb0e (refs/remotes/origin/codex-midas-parity-foundation^{tree})
+[5]  6b13a689bc7f1788697e0d547e254555cf9116a5 (refs/remotes/origin/repo-health-data:repository-health)
