@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-10-05T07:48:13Z",
+  "timestamp": "2026-10-12T08:12:23Z",
   "repository": "LorenzoMorabito/MDS-Semantic-Model",
   "mode": "schedule",
   "branch": "master",
   "commit": "856448e76231a7639c1de6a92b4c4472d575565d",
   "git_core": {
     "size_pack_mb": 0.15,
-    "object_count": 623,
-    "packed_object_count": 623,
+    "object_count": 634,
+    "packed_object_count": 634,
     "pack_count": 1,
     "loose_object_count": 0
   },
@@ -88,6 +88,12 @@
     "blob_over_max": 0,
     "largest_blobs": [
       {
+        "sha": "31841a5c28a029719cce564968be83822ca50b4b",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 54285,
+        "size_mb": 0.05
+      },
+      {
         "sha": "d3edbe3993b0d27ba429e5bc03862e15a6a871fa",
         "path": "repository-health/history/top-files-history.csv",
         "size_b": 52278,
@@ -140,12 +146,6 @@
         "path": "repository-health/history/top-files-history.csv",
         "size_b": 36222,
         "size_mb": 0.03
-      },
-      {
-        "sha": "f2dfcea45c39ae823d4c4a440a1587b492bec437",
-        "path": "repository-health/history/top-files-history.csv",
-        "size_b": 34215,
-        "size_mb": 0.03
       }
     ]
   },
@@ -157,7 +157,7 @@
   "file_growth": {
     "hasBaseline": true,
     "baseline_commit": "856448e76231a7639c1de6a92b4c4472d575565d",
-    "baseline_timestamp": "2026-09-28T07:50:07Z",
+    "baseline_timestamp": "2026-10-05T07:48:13Z",
     "new_entries_count": 0,
     "grown_entries_count": 0,
     "shrunk_entries_count": 0,
