@@ -1,0 +1,280 @@
+{
+  "timestamp": "2026-10-19T07:03:32Z",
+  "repository": "LorenzoMorabito/MDS-Semantic-Model",
+  "mode": "schedule",
+  "branch": "master",
+  "commit": "856448e76231a7639c1de6a92b4c4472d575565d",
+  "git_core": {
+    "size_pack_mb": 0.15,
+    "object_count": 645,
+    "packed_object_count": 645,
+    "pack_count": 1,
+    "loose_object_count": 0
+  },
+  "repo": {
+    "git_size_mb": 0.21,
+    "tracked_file_count": 78,
+    "working_file_count": 75,
+    "commit_count": 51,
+    "largest_current_file_mb": 0.03,
+    "top_current_files": [
+      {
+        "path": "repository-health/scripts/RepoHealth.Common.ps1",
+        "size_mb": 0.03,
+        "size_b": 33834
+      },
+      {
+        "path": "repository-health/scripts/Build-RepoHealthDashboard.ps1",
+        "size_mb": 0.03,
+        "size_b": 29096
+      },
+      {
+        "path": "midas_trusted_02.Report/StaticResources/SharedResources/BaseThemes/CY26SU02.json",
+        "size_mb": 0.02,
+        "size_b": 19330
+      },
+      {
+        "path": "midas_trusted_02.SemanticModel/definition/tables/f_midas_sales.tmdl",
+        "size_mb": 0.01,
+        "size_b": 14358
+      },
+      {
+        "path": "tools/Publish-GitHubProjectTracking.ps1",
+        "size_mb": 0.01,
+        "size_b": 12207
+      },
+      {
+        "path": "repository-health/analyzer.ps1",
+        "size_mb": 0.01,
+        "size_b": 8747
+      },
+      {
+        "path": "midas_trusted_02.SemanticModel/definition/relationships.tmdl",
+        "size_mb": 0.01,
+        "size_b": 7135
+      },
+      {
+        "path": "docs/project-management/backlog/midas-work-items.csv",
+        "size_mb": 0.0,
+        "size_b": 5001
+      },
+      {
+        "path": ".github/workflows/repo-health-schedule.yml",
+        "size_mb": 0.0,
+        "size_b": 4442
+      },
+      {
+        "path": "repository-health/RUNBOOK.md",
+        "size_mb": 0.0,
+        "size_b": 4061
+      }
+    ],
+    "forbidden_files": [
+      {
+        "path": "docs/project-management/backlog/midas-work-items.csv",
+        "size_mb": 0.0,
+        "extension": ".csv"
+      }
+    ],
+    "tracked_excluded_files": [
+      "midas_trusted_02.SemanticModel/.pbi/editorSettings.json"
+    ]
+  },
+  "history": {
+    "max_blob_mb": 0.05,
+    "max_blob_path": "repository-health/history/top-files-history.csv",
+    "blob_over_1mb": 0,
+    "blob_over_5mb": 0,
+    "blob_over_max": 0,
+    "largest_blobs": [
+      {
+        "sha": "1c5620753f7ca0399271facb5b9f9cc7662fe9e7",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 56292,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "31841a5c28a029719cce564968be83822ca50b4b",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 54285,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "d3edbe3993b0d27ba429e5bc03862e15a6a871fa",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 52278,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "4dc8059d2997a0ce3ab271f01716099e3933f3c5",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 50271,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "ef9194b9e642b1c689a88619752403e01dedaa36",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 48264,
+        "size_mb": 0.05
+      },
+      {
+        "sha": "64864626c3240e8ee5b87a78f4c0f28df7d6d73a",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 46257,
+        "size_mb": 0.04
+      },
+      {
+        "sha": "caa8b0bc3b924f339ae5fa289bfa8596e4e3f2e9",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 44250,
+        "size_mb": 0.04
+      },
+      {
+        "sha": "4cba7fc2c40afc9b5c3c92f5bc251d82853c206d",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 42243,
+        "size_mb": 0.04
+      },
+      {
+        "sha": "0c884a4f24c3ba8e0586b7fe5f3cbee248f10e8e",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 40236,
+        "size_mb": 0.04
+      },
+      {
+        "sha": "b7664317d0606f0eb9ffdb81abea79559370bd0d",
+        "path": "repository-health/history/top-files-history.csv",
+        "size_b": 38229,
+        "size_mb": 0.04
+      }
+    ]
+  },
+  "growth": {
+    "hasBaseline": true,
+    "size_pack_growth_pct": 0.0,
+    "git_size_growth_pct": 5.0
+  },
+  "file_growth": {
+    "hasBaseline": true,
+    "baseline_commit": "856448e76231a7639c1de6a92b4c4472d575565d",
+    "baseline_timestamp": "2026-10-12T08:12:23Z",
+    "new_entries_count": 0,
+    "grown_entries_count": 0,
+    "shrunk_entries_count": 0,
+    "unchanged_count": 10,
+    "changes": [
+      {
+        "path": "repository-health/scripts/RepoHealth.Common.ps1",
+        "rank": 1,
+        "previous_rank": 1,
+        "current_size_mb": 0.03,
+        "previous_size_mb": 0.03,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "repository-health/scripts/Build-RepoHealthDashboard.ps1",
+        "rank": 2,
+        "previous_rank": 2,
+        "current_size_mb": 0.03,
+        "previous_size_mb": 0.03,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "midas_trusted_02.Report/StaticResources/SharedResources/BaseThemes/CY26SU02.json",
+        "rank": 3,
+        "previous_rank": 3,
+        "current_size_mb": 0.02,
+        "previous_size_mb": 0.02,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "midas_trusted_02.SemanticModel/definition/tables/f_midas_sales.tmdl",
+        "rank": 4,
+        "previous_rank": 4,
+        "current_size_mb": 0.01,
+        "previous_size_mb": 0.01,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "tools/Publish-GitHubProjectTracking.ps1",
+        "rank": 5,
+        "previous_rank": 5,
+        "current_size_mb": 0.01,
+        "previous_size_mb": 0.01,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "repository-health/analyzer.ps1",
+        "rank": 6,
+        "previous_rank": 6,
+        "current_size_mb": 0.01,
+        "previous_size_mb": 0.01,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "midas_trusted_02.SemanticModel/definition/relationships.tmdl",
+        "rank": 7,
+        "previous_rank": 7,
+        "current_size_mb": 0.01,
+        "previous_size_mb": 0.01,
+        "delta_mb": 0.0,
+        "delta_pct": 0.0,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "docs/project-management/backlog/midas-work-items.csv",
+        "rank": 8,
+        "previous_rank": 8,
+        "current_size_mb": 0.0,
+        "previous_size_mb": 0.0,
+        "delta_mb": 0.0,
+        "delta_pct": null,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": ".github/workflows/repo-health-schedule.yml",
+        "rank": 9,
+        "previous_rank": 9,
+        "current_size_mb": 0.0,
+        "previous_size_mb": 0.0,
+        "delta_mb": 0.0,
+        "delta_pct": null,
+        "change_type": "UNCHANGED"
+      },
+      {
+        "path": "repository-health/RUNBOOK.md",
+        "rank": 10,
+        "previous_rank": 10,
+        "current_size_mb": 0.0,
+        "previous_size_mb": 0.0,
+        "delta_mb": 0.0,
+        "delta_pct": null,
+        "change_type": "UNCHANGED"
+      }
+    ]
+  },
+  "policy": {
+    "status": "FAIL",
+    "fail_reasons": [
+      "Forbidden extensions detected in working tree: docs/project-management/backlog/midas-work-items.csv",
+      "Tracked files found in excluded paths: midas_trusted_02.SemanticModel/.pbi/editorSettings.json"
+    ],
+    "warning_reasons": []
+  },
+  "git_sizer": {
+    "available": true,
+    "output_path": ".\\repository-health\\outputs\\current\\git-sizer.txt"
+  }
+}
