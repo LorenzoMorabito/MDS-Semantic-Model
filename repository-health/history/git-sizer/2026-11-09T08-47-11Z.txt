@@ -1,0 +1,53 @@
+Processing blobs: 390                        
+Processing trees: 245                        
+Processing commits: 43                        
+Matching commits to trees: 43                        
+Processing annotated tags: 0                        
+Processing references: 4                        
+| Name                         | Value     | Level of concern               |
+| ---------------------------- | --------- | ------------------------------ |
+| Overall repository size      |           |                                |
+| * Commits                    |           |                                |
+|   * Count                    |    43     |                                |
+|   * Total size               |  13.6 KiB |                                |
+| * Trees                      |           |                                |
+|   * Count                    |   245     |                                |
+|   * Total size               |   119 KiB |                                |
+|   * Total tree entries       |  2.47 k   |                                |
+| * Blobs                      |           |                                |
+|   * Count                    |   390     |                                |
+|   * Total size               |  2.10 MiB |                                |
+| * Annotated tags             |           |                                |
+|   * Count                    |     0     |                                |
+| * References                 |           |                                |
+|   * Count                    |     4     |                                |
+|     * Branches               |     1     |                                |
+|     * Remote-tracking refs   |     3     |                                |
+|                              |           |                                |
+| Biggest objects              |           |                                |
+| * Commits                    |           |                                |
+|   * Maximum size         [1] |   345 B   |                                |
+|   * Maximum parents      [1] |     1     |                                |
+| * Trees                      |           |                                |
+|   * Maximum entries      [2] |    62     |                                |
+| * Blobs                      |           |                                |
+|   * Maximum size         [3] |  60.9 KiB |                                |
+|                              |           |                                |
+| History structure            |           |                                |
+| * Maximum history depth      |    31     |                                |
+| * Maximum tag depth          |     0     |                                |
+|                              |           |                                |
+| Biggest checkouts            |           |                                |
+| * Number of directories  [4] |    26     |                                |
+| * Maximum path depth     [4] |     5     |                                |
+| * Maximum path length    [4] |    88 B   |                                |
+| * Number of files        [5] |    97     |                                |
+| * Total size of files    [5] |   486 KiB |                                |
+| * Number of symlinks         |     0     |                                |
+| * Number of submodules       |     0     |                                |
+
+[1]  fc799808cc8db4f0ec5f7a3063ae132c92cbe69b (refs/remotes/origin/repo-health-data)
+[2]  3ef0f02a71cb7f4649632b2c54caed7be2bcc9ab (refs/remotes/origin/repo-health-data:repository-health/history/runs)
+[3]  177acadf7a141c83f8ffea075497e22186d05121 (refs/remotes/origin/repo-health-data:repository-health/history/top-files-history.csv)
+[4]  a9c5efc4f52bdd1196c8f758a073e4c2b3bdbb0e (refs/remotes/origin/codex-midas-parity-foundation^{tree})
+[5]  7829464759f1f8ba9738f98d5ac629d8776fe6fe (refs/remotes/origin/repo-health-data:repository-health)
